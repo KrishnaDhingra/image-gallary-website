@@ -10,11 +10,12 @@
 }
 
 html {
-  line-sizing: normal;
+  line-height: normal;
 }
 
 body {
   margin: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 [hidden] {

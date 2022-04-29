@@ -1,7 +1,12 @@
 import './App.css'
+import Enter from './components/enter/Enter'
+import Navbar from './components/navbar/Navbar'
 
 function App() {
-  return <div className="text-red-300">Hello</div>
+  return (
+    // <Enter />
+    <Navbar />
+  )
 }
 
 export default App
