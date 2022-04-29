@@ -4,6 +4,7 @@ nav {
 }
 nav ul {
   z-index: -1;
+  inset: 0;
   position: absolute;
   width: 100vw;
   background-color: rgba(0, 0, 0, 1);
@@ -30,8 +31,18 @@ nav section {
   display: flex;
   gap: 0.4rem;
 }
+.bell path,
+.hamburger > * {
+  transition: all 0.4s;
+}
 .hamburger > * {
   border-left: 2px solid black;
+}
+.bell[data-visible='true'] path {
+  stroke: white;
+}
+.hamburger[data-visible='true'] > * {
+  border-left: 2px solid white;
 }
 .hamburger .line1 {
   height: 1.25rem;
