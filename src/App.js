@@ -8,7 +8,7 @@ function App() {
     // <Enter />
     <div>
       <Navbar />
-      <WhatHappeningSidePopup />
+      {/* <WhatHappeningSidePopup /> */}
     </div>
   )
 }
