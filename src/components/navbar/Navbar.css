@@ -10,7 +10,7 @@ nav ul {
   min-height: 23.5rem;
   justify-content: center;
   align-items: flex-end;
-  padding-block: 4rem;
+  padding-bottom: 4rem;
 }
 nav ul section {
   width: 100%;
@@ -52,7 +52,7 @@ nav section {
   }
   nav ul {
     min-height: 100vh;
-    padding-block: 2rem;
+    padding-bottom: 5rem;
   }
   nav ul section {
     display: flex;
