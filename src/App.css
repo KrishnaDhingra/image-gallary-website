@@ -1,3 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  line-sizing: normal;
+}
+
+body {
+  margin: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.17rem;
+}
+h4 {
+  font-size: 1rem;
+}
+h5 {
+  font-size: 0.83rem;
+}
+h6 {
+  font-size: 0.67rem;
+}
+
+h1 {
+  margin: 0.67em 0;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+hr {
+  border-style: solid;
+  border-width: 1px 0 0;
+  color: inherit;
+  height: 0;
+  overflow: visible;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  vertical-align: middle;
+  max-width: 100%;
+}
+audio:not([controls]) {
+  display: none;
+}
+
+picture {
+  display: contents;
+}
+source {
+  display: none;
+}
+
+img,
+svg,
+video,
+canvas {
+  height: auto;
+}
+
+audio {
+  width: 100%;
+}
+
+img {
+  border-style: none;
+}
+
+svg {
+  overflow: hidden;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block;
+}
+
+[type='checkbox'],
+[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
