@@ -3,9 +3,14 @@ import './Navbar.css'
 import { motion, AnimatePresence } from 'framer-motion'
 import Bell from '../../utilities/navbar-bell.svg'
 import Logo from '../../utilities/navbar-logo.svg'
+import Backdrop from '../backdrop'
 
 function Navbar() {
   const [visible, setVisible] = useState(false)
+
+  let toggleVisibility = () => {
+    setVisible(false)
+  }
 
   const ul = {
     hidden: { y: '-100%' },
@@ -50,31 +55,34 @@ function Navbar() {
     'Pricing',
   ]
   return (
-    <nav>
+    <nav className="z-100">
       <AnimatePresence>
         {visible && (
-          <motion.ul
-            variants={ul}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-          >
-            <section className="sm:px-[2rem] lg:px-[4.2rem]">
-              {navbarLinks.map((link) => {
-                return (
-                  <motion.li variants={item}>
-                    <a href="">
-                      <span>{link}</span>
-                    </a>
-                  </motion.li>
-                )
-              })}
-            </section>
-          </motion.ul>
+          <Backdrop onSelect={toggleVisibility}>
+            <motion.ul
+              onClick={(e) => e.stopPropagation()}
+              variants={ul}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+            >
+              <section className="sm:px-[2rem] lg:px-[4.2rem]">
+                {navbarLinks.map((link) => {
+                  return (
+                    <motion.li variants={item}>
+                      <a href="">
+                        <span>{link}</span>
+                      </a>
+                    </motion.li>
+                  )
+                })}
+              </section>
+            </motion.ul>
+          </Backdrop>
         )}
       </AnimatePresence>
 
-      <section className="px-[1rem] sm:px-[2rem] lg:px-[4.2rem]">
+      <section className="px-[1rem] sm:px-[2rem] lg:px-[3rem]">
         <div className="bell" data-visible={visible}>
           <svg
             width="20"

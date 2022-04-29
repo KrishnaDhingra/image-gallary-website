@@ -1,0 +1,28 @@
+.sidepopup-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: min(100%, 600px);
+  background-color: black;
+}
+.popup-sidebar {
+  padding: 1.5rem 1.5rem;
+  width: max-content;
+  border: 3px solid red;
+}
+.backdrop {
+  background-color: rgba(244, 240, 240, 0.7);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+.popup-main-content {
+  padding: 1rem 0rem;
+}
