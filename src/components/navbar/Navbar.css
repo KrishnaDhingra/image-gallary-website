@@ -1,11 +1,12 @@
 nav {
-  background-color: white;
+  background-color: transparent;
   position: relative;
 }
 nav ul {
+  z-index: -1;
   position: absolute;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 1);
   display: flex;
   min-height: 23.5rem;
   justify-content: center;
@@ -43,7 +44,7 @@ nav section {
 }
 @media only screen and (min-width: 850px) {
   nav ul li a span {
-    font-size: clamp(1.5rem, 2vw, 2.3rem);
+    font-size: clamp(1.5rem, 2vw, 2rem);
   }
 }
 @media only screen and (max-width: 850px) {
@@ -52,11 +53,15 @@ nav section {
   }
   nav ul {
     min-height: 100vh;
-    padding-bottom: 5rem;
+    align-items: center;
+    padding-bottom: 0rem;
   }
   nav ul section {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+  }
+  nav section {
+    padding-top: 2.5rem;
   }
 }

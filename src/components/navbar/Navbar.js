@@ -46,7 +46,7 @@ function Navbar() {
         </section>
       </ul>
 
-      <section className="sm:px-[2rem] lg:px-[4.2rem]">
+      <section className="px-[1rem] sm:px-[2rem] lg:px-[4.2rem]">
         <div className="bell">
           <img src={Bell} alt="" />
         </div>
