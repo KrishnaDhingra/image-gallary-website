@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   height: 100vh;
-  width: min(100%, 600px);
+  width: min(100%, 500px);
   background-color: black;
   color: white;
   overflow-y: auto;

@@ -15,11 +15,14 @@ function WhatHappeningSidePopup({ onSelect }) {
       x: '0%',
       transition: {
         ease: 'easeOut',
-        duration: 0.3,
+        duration: 0.4,
       },
     },
     exit: {
       x: '-100%',
+      transition: {
+        duration: 0.2,
+      },
     },
   }
 
@@ -55,8 +58,30 @@ function WhatHappeningSidePopup({ onSelect }) {
 }
 
 const SideBar = () => {
+  const item = {
+    hidden: { x: '-40%', opacity: 0 },
+    visible: {
+      x: '0%',
+      opacity: 1,
+      transition: {
+        ease: 'easeOut',
+        duration: 0.4,
+        delay: 0.35,
+      },
+    },
+    exit: {
+      x: '-40%',
+      transition: {
+        duration: 0.2,
+      },
+    },
+  }
+
   return (
-    <section className="popup-sidebar flex flex-col justify-between h-screen">
+    <motion.section
+      variants={item}
+      className="popup-sidebar flex flex-col justify-between h-screen"
+    >
       <CgClose className="text-white text-2xl" />
       <div className="flex flex-col gap-4 sidebar-bottom items-center">
         {/* <span className="sidebar-text text-white text-sm">
@@ -66,13 +91,32 @@ const SideBar = () => {
         <FiFacebook className="text-white text-xl" />
         <FiTwitter className="text-white text-md" />
       </div>
-    </section>
+    </motion.section>
   )
 }
 
 const Article = () => {
+  const item = {
+    hidden: { x: '-10%', opacity: 0 },
+    visible: {
+      x: '0%',
+      opacity: 1,
+      transition: {
+        ease: 'easeOut',
+        duration: 0.4,
+        delay: 0.2,
+      },
+    },
+    exit: {
+      x: '-10%',
+      transition: {
+        duration: 0.2,
+      },
+    },
+  }
+
   return (
-    <article className="flex flex-col gap-4">
+    <motion.article variants={item} className="flex flex-col gap-4">
       <img src={SideBarImage} alt="" />
       <h2 className="font-bold">Header 1 - Lorem Ispum</h2>
       <p className="text-sm">
@@ -85,7 +129,7 @@ const Article = () => {
         maxime autem! Et, aperiam. Consequatur dolores doloribus perferendis
         dolor corrupti ut nemo sint quaerat fugiat quam.
       </p>
-    </article>
+    </motion.article>
   )
 }
 export default WhatHappeningSidePopup

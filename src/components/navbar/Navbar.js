@@ -23,15 +23,15 @@ function Navbar() {
       y: '0%',
       transition: {
         ease: 'easeOut',
-        duration: 0.2,
-        staggerChildren: 0.07,
+        duration: 0.3,
+        staggerChildren: 0.09,
       },
     },
     exit: {
       y: '-100%',
       transition: {
         ease: 'easeOut',
-        duration: 0.2,
+        duration: 0.4,
       },
     },
   }
@@ -72,7 +72,7 @@ function Navbar() {
                 animate="visible"
                 exit="exit"
               >
-                <section className="sm:px-[2rem] lg:px-[4.2rem]">
+                <section className="sm:px-[1rem] lg:px-[3rem]">
                   {navbarLinks.map((link) => {
                     return (
                       <motion.li key={link} variants={item}>
@@ -92,7 +92,10 @@ function Navbar() {
           <div
             className="bell"
             data-visible={navbarVisible}
-            onClick={() => setSideBarVisible(!sidebarVisible)}
+            onClick={() => {
+              setNavbarVisible(false)
+              setSideBarVisible(!sidebarVisible)
+            }}
           >
             <svg
               width="20"
@@ -116,7 +119,10 @@ function Navbar() {
           <div
             className="hamburger"
             data-visible={navbarVisible}
-            onClick={() => setNavbarVisible(!navbarVisible)}
+            onClick={() => {
+              setSideBarVisible(false)
+              setNavbarVisible(!navbarVisible)
+            }}
           >
             <div className="line1"></div>
             <div className="line2"></div>
