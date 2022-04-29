@@ -5,11 +5,16 @@
   height: 100vh;
   width: min(100%, 600px);
   background-color: black;
+  color: white;
+  overflow-y: auto;
+  /* box-sizing: border-box; */
 }
 .popup-sidebar {
+  flex-shrink: 0;
   padding: 1.5rem 1.5rem;
   width: max-content;
-  border: 3px solid red;
+
+  /* border: 3px solid red; */
 }
 .backdrop {
   background-color: rgba(244, 240, 240, 0.7);
@@ -24,5 +29,16 @@ h6 {
   margin: 0;
 }
 .popup-main-content {
-  padding: 1rem 0rem;
+  height: 100vh;
+  overflow: auto;
+  padding: 1rem 0.5rem;
+  padding-right: 3.5rem;
+  /* background-color: blue; */
+  /* flex-grow: 1; */
+}
+.what-happening-text {
+  position: relative;
+  border-bottom: 1px solid gray;
+  padding-bottom: 0.4rem;
+  margin-bottom: 1.5rem;
 }
