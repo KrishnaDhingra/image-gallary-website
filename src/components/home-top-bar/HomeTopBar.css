@@ -1,0 +1,98 @@
+:root {
+  --main-text-color: #b5406c;
+}
+
+.home-top-bar-main-container {
+  padding-top: 10rem;
+  display: flex;
+  width: min(1300px, 90%);
+  margin: 0rem auto;
+  gap: clamp(4rem, 7vw, 8rem);
+}
+.home-top-bar-main-container > * {
+  flex: 1;
+  /* border: 2px solid red; */
+  width: 100%;
+  /* flex-basis: 100%; */
+}
+.home-top-bar-main-container .left h1 {
+  line-height: normal;
+  font-size: clamp(3rem, 3vw, 60px);
+  font-weight: 600;
+  color: var(--main-text-color);
+}
+.start {
+  margin-top: 2rem;
+  background-color: var(--main-text-color);
+  color: white;
+  border-radius: 12px;
+  align-self: flex-start;
+  padding: 0.5rem 4rem;
+}
+.home-top-bar-main-container .right img {
+  width: 85%;
+  max-width: 580px;
+  border-radius: 45px;
+  border: 0.95rem solid white;
+  margin: auto auto;
+  flex-shrink: 0;
+}
+.home-top-bar-main-container .right div::before {
+  content: '';
+  position: absolute;
+  bottom: -12%;
+  left: -4%;
+  z-index: -1;
+  height: 9.3rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: var(--main-text-color);
+}
+@media only screen and (max-width: 1000px) {
+  .home-top-bar-main-container {
+    flex-direction: column;
+  }
+  .home-top-bar-main-container {
+    padding-top: 6rem;
+  }
+  .home-top-bar-main-container .left,
+  .home-top-bar-main-container .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .home-top-bar-main-container .right div::before {
+    height: 7rem;
+    bottom: -12%;
+    left: 0%;
+  }
+  .home-top-bar-main-container .right img {
+    width: 90%;
+    max-width: 550px;
+    border-radius: 20px;
+    margin: auto auto;
+  }
+  .start {
+    align-self: center;
+  }
+  .discover-more {
+    font-weight: 500;
+  }
+  .left p {
+    font-weight: 500;
+  }
+  .home-top-bar-main-container .left h1 {
+    font-weight: 500;
+    color: black;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .home-top-bar-main-container .right div::before {
+    height: 5rem;
+    bottom: -12%;
+  }
+  .home-top-bar-main-container .right img {
+    max-width: 450px;
+  }
+}
