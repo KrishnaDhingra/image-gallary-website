@@ -46,8 +46,12 @@ nav section {
   border-left: 2.7px solid black;
   border-radius: 10%;
 }
+.bell path {
+  fill: black;
+}
 .bell[data-visible='true'] path {
   stroke: white;
+  fill: white;
 }
 .hamburger[data-visible='true'] > * {
   border-left: 2.7px solid white;
@@ -80,5 +84,21 @@ nav section {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  nav section {
+    padding-top: 0.7rem;
+  }
+  .hamburger,
+  .bell {
+    transform: scale(0.7, 0.7);
+  }
+  .logo {
+    transform: scale(0.5, 0.5);
+  }
+  .hamburger > * {
+    border-left: 3.5px solid black;
+    border-radius: 10%;
   }
 }

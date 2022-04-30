@@ -7,14 +7,11 @@
   background-color: black;
   color: white;
   overflow-y: auto;
-  /* box-sizing: border-box; */
 }
 .popup-sidebar {
   flex-shrink: 0;
   padding: 1.5rem 1.5rem;
   width: max-content;
-
-  /* border: 3px solid red; */
 }
 .backdrop {
   background-color: rgba(244, 240, 240, 0.7);
@@ -33,12 +30,18 @@ h6 {
   overflow: auto;
   padding: 1rem 0.5rem;
   padding-right: 3.5rem;
-  /* background-color: blue; */
-  /* flex-grow: 1; */
 }
 .what-happening-text {
   position: relative;
   border-bottom: 1px solid gray;
   padding-bottom: 0.4rem;
   margin-bottom: 1.5rem;
+}
+@media only screen and (max-width: 600px) {
+  .popup-sidebar {
+    padding: 1.5rem 1.2rem;
+  }
+  .popup-main-content {
+    padding-right: 2rem;
+  }
 }

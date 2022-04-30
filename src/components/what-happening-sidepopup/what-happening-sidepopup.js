@@ -82,7 +82,7 @@ const SideBar = () => {
       variants={item}
       className="popup-sidebar flex flex-col justify-between h-screen"
     >
-      <CgClose className="text-white text-2xl" />
+      <CgClose className="text-white text-xl sm:text-2xl" />
       <div className="flex flex-col gap-4 sidebar-bottom items-center">
         {/* <span className="sidebar-text text-white text-sm">
         Follow OOAK Photography
