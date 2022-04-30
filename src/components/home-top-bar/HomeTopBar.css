@@ -3,7 +3,6 @@
 }
 
 .home-top-bar-main-container {
-  padding-top: 10rem;
   display: flex;
   width: min(1300px, 90%);
   margin: 0rem auto;
@@ -17,6 +16,7 @@
 }
 .home-top-bar-main-container .left h1 {
   line-height: normal;
+  text-transform: uppercase;
   font-size: clamp(3rem, 3vw, 60px);
   font-weight: 600;
   color: var(--main-text-color);
@@ -52,9 +52,6 @@
   .home-top-bar-main-container {
     flex-direction: column;
   }
-  .home-top-bar-main-container {
-    padding-top: 6rem;
-  }
   .home-top-bar-main-container .left,
   .home-top-bar-main-container .right {
     display: flex;
@@ -88,6 +85,9 @@
   }
 }
 @media only screen and (max-width: 600px) {
+  .home-top-bar-main-container .left h1 {
+    text-transform: capitalize;
+  }
   .home-top-bar-main-container .right div::before {
     height: 5rem;
     bottom: -12%;

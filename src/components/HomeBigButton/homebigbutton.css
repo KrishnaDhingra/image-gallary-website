@@ -1,0 +1,22 @@
+:root {
+  --main-bg-color: #b5406c;
+}
+
+.homebigbutton {
+  background-color: var(--main-bg-color);
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 12px;
+  padding: 2.2rem 1rem;
+  margin-top: 8rem;
+  margin-inline: auto;
+  width: min(800px, 90%);
+}
+@media only screen and (max-width: 600px) {
+  .homebigbutton {
+    padding: 1.3rem 1rem;
+    margin-top: 5rem;
+    font-size: 12px;
+  }
+}
