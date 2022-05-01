@@ -1,0 +1,29 @@
+.WeddingImagesCarousel {
+  width: max-content;
+  max-width: 1300px;
+  margin-top: 6rem;
+  height: 403px;
+  display: flex;
+  margin-inline: auto;
+  gap: 1.3rem;
+}
+.wedding-image {
+  width: 120px;
+  height: 100%;
+  position: relative;
+  background-image: url('https://wallpaperaccess.com/full/775987.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: filter 0.4s;
+  filter: grayscale(100%);
+}
+.wedding-image:hover {
+  filter: grayscale(0%);
+}
+
+.wedding-image:nth-child(even) {
+  transform: translateY(-50px);
+}
+.wedding-image:nth-child(even) {
+  transform: translateY(50px);
+}
