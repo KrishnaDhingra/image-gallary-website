@@ -37,11 +37,13 @@ function FAQ() {
   ]
   return (
     <AnimateSharedLayout>
-      <div className="circle circle1"></div>
-      <div className="circle circle2"></div>
+      <div className="hidden lg:block circle circle1"></div>
+      <div className="hidden lg:block circle circle2"></div>
       <motion.section className="faq-container">
         <h1>FAQ</h1>
-        <p>Find your answers for the most asked questions</p>
+        <p className="text-center">
+          Find your answers for the most asked questions
+        </p>
 
         <div className="faq-inner">
           <motion.ul layout>

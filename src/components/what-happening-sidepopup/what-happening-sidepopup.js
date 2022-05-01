@@ -39,12 +39,12 @@ function WhatHappeningSidePopup({ onSelect }) {
         <SideBar />
 
         <section className="popup-main-content">
-          <h1
+          <h2
             onClick={onSelect}
             className="text-white font-semibold what-happening-text"
           >
             What's Happening
-          </h1>
+          </h2>
 
           <div className="flex flex-col gap-20">
             {[1, 2, 3, 4].map((element) => {
@@ -82,14 +82,14 @@ const SideBar = () => {
       variants={item}
       className="popup-sidebar flex flex-col justify-between h-screen"
     >
-      <CgClose className="text-white text-xl sm:text-2xl" />
-      <div className="flex flex-col gap-4 sidebar-bottom items-center">
+      <CgClose className="text-white text-md" />
+      <div className="flex flex-col gap-7 sidebar-bottom items-center">
         {/* <span className="sidebar-text text-white text-sm">
         Follow OOAK Photography
       </span> */}
-        <BsInstagram className="text-white text-md" />
-        <FiFacebook className="text-white text-xl" />
-        <FiTwitter className="text-white text-md" />
+        <BsInstagram className="text-white text-xs sm:text-sm" />
+        <FiFacebook className="text-white text-sm sm:text-md" />
+        <FiTwitter className="text-white text-xs sm:text-sm" />
       </div>
     </motion.section>
   )
@@ -118,7 +118,7 @@ const Article = () => {
   return (
     <motion.article variants={item} className="flex flex-col gap-4">
       <img src={SideBarImage} alt="" />
-      <h2 className="font-bold">Header 1 - Lorem Ispum</h2>
+      <h3 className="font-bold">Header 1 - Lorem Ispum</h3>
       <p className="text-sm">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium
         suscipit deleniti ad unde quo, nulla temporibus, fugit voluptatum
