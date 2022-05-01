@@ -1,8 +1,27 @@
+:root {
+  --circles-size: 9.3rem;
+}
+
 .faq-container {
   margin-block: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.circle {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: -3%;
+  height: var(--circles-size);
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: #b5406c;
+}
+.circle2 {
+  top: calc(100% - var(--circles-size) - 0.5rem);
+  left: auto;
+  right: -3%;
 }
 .faq-container h1 {
   font-weight: 600;

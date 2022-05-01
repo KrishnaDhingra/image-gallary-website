@@ -10,9 +10,7 @@
 }
 .home-top-bar-main-container > * {
   flex: 1;
-  /* border: 2px solid red; */
   width: 100%;
-  /* flex-basis: 100%; */
 }
 .home-top-bar-main-container .left h1 {
   line-height: normal;
