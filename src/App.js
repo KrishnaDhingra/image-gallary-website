@@ -10,9 +10,9 @@ function App() {
     // <Enter />
     <div>
       <Navbar />
-      <FAQ />
+      {/* <FAQ /> */}
       {/* <Home /> */}
-      {/* <Wedding /> */}
+      <Wedding />
     </div>
   )
 }
