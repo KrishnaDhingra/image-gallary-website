@@ -4,7 +4,7 @@ import WeddingFooter from '../components/wedding-footer/wedding-footer'
 
 function Wedding() {
   return (
-    <div className="flex flex-col gap-16">
+    <div className="flex flex-col gap-4">
       <WeddingImagesCarousel />
       <WeddingFooter />
     </div>

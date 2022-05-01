@@ -16,7 +16,7 @@ function WeddingImagesCarousel() {
   ]
   return (
     <AnimateSharedLayout>
-      <div className="flex flex-col items-center gap-20">
+      <div className="flex flex-col items-center gap-24">
         <motion.section layout className="WeddingImagesCarousel">
           {items.map((item) => {
             return (

@@ -1,6 +1,5 @@
 .wedding-footer {
   width: min(1500px, 95%);
-  display: flex;
   align-items: center;
   margin-inline: auto;
   justify-content: space-between;

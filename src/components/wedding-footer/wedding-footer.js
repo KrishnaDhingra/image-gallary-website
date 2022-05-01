@@ -3,7 +3,7 @@ import './wedding-footer.css'
 
 function WeddingFooter() {
   return (
-    <footer className="wedding-footer">
+    <footer className="wedding-footer hidden sm:flex pb-8">
       <a href="">Services</a>
       <a href="">Gallery</a>
       <a href="">Discover More +</a>
