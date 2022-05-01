@@ -1,0 +1,14 @@
+.wedding-footer {
+  width: min(1500px, 95%);
+  display: flex;
+  align-items: center;
+  margin-inline: auto;
+  justify-content: space-between;
+}
+.wedding-footer > a {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.wedding-footer > a:hover {
+  color: rgb(114, 112, 112);
+}

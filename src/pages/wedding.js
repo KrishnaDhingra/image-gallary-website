@@ -3,6 +3,11 @@ import WeddingImagesCarousel from '../components/wedding-images-carousel/wedding
 import WeddingFooter from '../components/wedding-footer/wedding-footer'
 
 function Wedding() {
-  return <WeddingImagesCarousel />
+  return (
+    <div className="flex flex-col gap-16">
+      <WeddingImagesCarousel />
+      <WeddingFooter />
+    </div>
+  )
 }
 export default Wedding
