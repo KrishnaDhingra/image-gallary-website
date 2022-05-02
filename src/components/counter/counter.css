@@ -1,9 +1,11 @@
 .counter-container {
   background-color: transparent;
   display: grid;
+  width: min(1900px, 90%);
+  margin-inline: auto;
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
   align-items: center;
-  justify-items: center;
+  justify-items: space-between;
   margin-block: 8rem;
 }
 .counter-container > * {
@@ -11,7 +13,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid black; */
   background-color: transparent;
   width: 100%;
 }

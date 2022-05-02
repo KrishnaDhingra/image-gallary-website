@@ -1,0 +1,51 @@
+:root {
+  --main-bg-color: #660746;
+}
+.main-samples-container {
+  width: min(1000px, 95%);
+  position: relative;
+  height: 480px;
+  margin-inline: auto;
+  border-radius: 12px;
+  display: grid;
+  align-items: center;
+  grid-template-rows: 4rem 1fr 4rem;
+  margin-block: 5rem;
+}
+.background {
+  position: absolute;
+  z-index: 100;
+  height: 100%;
+  border-radius: 12px;
+  grid-row: 2 / 3;
+  background-color: var(--main-bg-color);
+  width: 100%;
+}
+.main-samples-container p {
+  font-size: 1rem;
+  color: white;
+}
+.main-samples-container .sample-image-container {
+  height: 100%;
+}
+.sample-image-container img {
+  height: 100%;
+  max-width: 300px;
+  margin-left: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 35px;
+  object-fit: cover;
+}
+.content-container {
+  grid-row: 1 / -1;
+  display: flex;
+  height: 100%;
+  z-index: 200;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 4rem;
+  /* gap: 10rem; */
+}
+.content-container > * {
+  flex: 1;
+}
