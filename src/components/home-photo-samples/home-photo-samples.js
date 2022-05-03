@@ -6,12 +6,18 @@ function HomePhotoSamples() {
   return (
     <section className="main-samples-container">
       <div className="background"></div>
-      <div className="content-container">
-        <p className="content">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-          mollitia, molestiae quas vel sint commodi repudiandae consequuntur
-          voluptatum laborum numquam blanditiis
-        </p>
+      <div className="content-container px-8 md:px-12 md:gap-[3.5rem] xl:gap-0 xl:px-[4.5rem]">
+        <div className="flex flex-col gap-4">
+          <h3 className="content-heading font-semibold text-[20px]">
+            Candid Photography
+          </h3>
+          <p className="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+            mollitia, molestiae quas vel sint commodi repudiandae consequuntur
+            voluptatum laborum numquam blanditiis
+          </p>
+          <h3 className="discover font-semibold text-[20px]">Discover +</h3>
+        </div>
         <div className="sample-image-container">
           <img src={SamplePhoto} alt="" />
         </div>

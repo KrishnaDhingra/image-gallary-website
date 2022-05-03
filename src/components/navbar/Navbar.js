@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './Navbar.css'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FaRegBell } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 import Logo from '../../utilities/navbar-logo.svg'
 import Backdrop from '../backdrop'
 import WhatHappeningSidePopup from '../what-happening-sidepopup/what-happening-sidepopup'
@@ -51,13 +52,13 @@ function Navbar() {
   }
 
   const navbarLinks = [
-    'About us',
-    'Jobs',
-    'Location',
-    'Book Now',
-    'FAQ',
-    'Blog',
-    'Pricing',
+    { text: 'About us', redirect: '/' },
+    { text: 'Jobs', redirect: '/' },
+    { text: 'Location', redirect: '/' },
+    { text: 'Book Now', redirect: '/' },
+    { text: 'FAQ', redirect: '/faq' },
+    { text: 'Blog', redirect: '/' },
+    { text: 'Pricing', redirect: '/' },
   ]
   return (
     <>
@@ -76,9 +77,9 @@ function Navbar() {
                   {navbarLinks.map((link) => {
                     return (
                       <motion.li key={link} variants={item}>
-                        <a href="">
-                          <span>{link}</span>
-                        </a>
+                        <Link to={link.redirect}>
+                          <span>{link.text}</span>
+                        </Link>
                       </motion.li>
                     )
                   })}

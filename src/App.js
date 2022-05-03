@@ -5,15 +5,18 @@ import WhatHappeningSidePopup from './components/what-happening-sidepopup/what-h
 import Home from './pages/home'
 import FAQ from './components/faq/faq'
 import Wedding from './pages/wedding'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 function App() {
   return (
     // <Enter />
-    <div>
+    <BrowserRouter>
       <Navbar />
-      {/* <FAQ /> */}
-      <Home />
-      {/* <Wedding /> */}
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/wedding" element={<Wedding />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

@@ -2,13 +2,13 @@
   width: max-content;
   max-width: min(1300px, 90%);
   margin-top: 7rem;
-  height: 403px;
+  height: 410px;
   display: flex;
   margin-inline: auto;
   gap: 1.3rem;
 }
 .wedding-image {
-  width: 120px;
+  width: 112px;
   height: 100%;
   position: relative;
   background-image: url('https://wallpaperaccess.com/full/775987.jpg');
