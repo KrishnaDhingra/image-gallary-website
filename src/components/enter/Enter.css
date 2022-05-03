@@ -1,0 +1,41 @@
+:root {
+  --bar-width: 7rem;
+}
+.right,
+.left,
+.top,
+.bottom {
+  position: absolute;
+  background-color: white;
+  z-index: 999990;
+}
+.right {
+  top: 0;
+  left: 0;
+  width: var(--bar-width);
+  height: 100vh;
+  background-image: linear-gradient(#600b87, #a34f8b);
+  z-index: 999999;
+}
+.left {
+  top: 0;
+  width: var(--bar-width);
+  height: 100vh;
+  right: 0;
+  background-image: linear-gradient(#600b87, #a34f8b);
+  z-index: 999999;
+}
+.top {
+  top: 0;
+  height: var(--bar-width);
+  width: 100vw;
+  right: 0;
+  background-image: linear-gradient(#600b87, #691488);
+}
+.bottom {
+  bottom: 0;
+  height: var(--bar-width);
+  width: 100vw;
+  right: 0;
+  background-image: linear-gradient(#96428a, #a34f8b);
+}

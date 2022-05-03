@@ -8,11 +8,11 @@ import Wedding from './pages/wedding'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 function App() {
   return (
-    // <Enter />
     <BrowserRouter>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/enter" element={<Enter />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/wedding" element={<Wedding />} />
       </Routes>

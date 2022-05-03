@@ -53,7 +53,7 @@ function Navbar() {
 
   const navbarLinks = [
     { text: 'About us', redirect: '/' },
-    { text: 'Jobs', redirect: '/' },
+    { text: 'Jobs', redirect: '/enter' },
     { text: 'Location', redirect: '/' },
     { text: 'Book Now', redirect: '/' },
     { text: 'FAQ', redirect: '/faq' },
