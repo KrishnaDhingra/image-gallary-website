@@ -76,7 +76,11 @@ function Navbar() {
                 <section className="sm:px-[1rem] lg:px-[3rem]">
                   {navbarLinks.map((link) => {
                     return (
-                      <motion.li key={link} variants={item}>
+                      <motion.li
+                        onClick={() => setNavbarVisible(false)}
+                        key={link}
+                        variants={item}
+                      >
                         <Link to={link.redirect}>
                           <span>{link.text}</span>
                         </Link>

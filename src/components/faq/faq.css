@@ -68,6 +68,7 @@
 @media only screen and (max-width: 600px) {
   .faq-inner ul li {
     padding: 1rem 1rem;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.4);
   }
   .question-container button {
     font-size: 2rem;

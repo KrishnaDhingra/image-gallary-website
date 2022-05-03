@@ -41,7 +41,7 @@ function FAQ() {
       <div className="hidden lg:block circle circle2"></div>
       <motion.section className="faq-container">
         <h1>FAQ</h1>
-        <p className="text-center">
+        <p className="text-center px-2 sm:px-0 ">
           Find your answers for the most asked questions
         </p>
 
