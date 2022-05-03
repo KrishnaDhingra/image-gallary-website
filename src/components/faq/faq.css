@@ -40,7 +40,7 @@
 }
 .faq-inner ul li {
   box-sizing: border-box;
-  border-top: 1px solid rgba(0, 0, 0, 0.4);
+  border-top: 0.1px solid rgba(0, 0, 0, 0.1);
   padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
@@ -68,7 +68,7 @@
 @media only screen and (max-width: 600px) {
   .faq-inner ul li {
     padding: 1rem 1rem;
-    border-top: 0.5px solid rgba(0, 0, 0, 0.4);
+    border-top: 0.1px solid rgba(0, 0, 0, 0.1);
   }
   .question-container button {
     font-size: 2rem;

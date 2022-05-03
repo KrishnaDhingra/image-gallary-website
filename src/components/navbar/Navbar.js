@@ -31,7 +31,7 @@ function Navbar() {
     exit: {
       y: '-100%',
       transition: {
-        ease: 'easeOut',
+        ease: 'easeIn',
         duration: 0.4,
       },
     },

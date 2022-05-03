@@ -1,15 +1,15 @@
 :root {
   --bar-width: 7rem;
 }
-.right,
-.left,
-.top,
-.bottom {
+.enter-content .right,
+.enter-content .left,
+.enter-content .top,
+.enter-content .bottom {
   position: absolute;
   background-color: white;
   z-index: 999990;
 }
-.right {
+.enter-content .right {
   top: 0;
   left: 0;
   width: var(--bar-width);
@@ -17,7 +17,7 @@
   background-image: linear-gradient(#600b87, #a34f8b);
   z-index: 999999;
 }
-.left {
+.enter-content .left {
   top: 0;
   width: var(--bar-width);
   height: 100vh;
@@ -25,14 +25,14 @@
   background-image: linear-gradient(#600b87, #a34f8b);
   z-index: 999999;
 }
-.top {
+.enter-content .top {
   top: 0;
   height: var(--bar-width);
   width: 100vw;
   right: 0;
   background-image: linear-gradient(#600b87, #691488);
 }
-.bottom {
+.enter-content .bottom {
   bottom: 0;
   height: var(--bar-width);
   width: 100vw;

@@ -35,18 +35,52 @@ function FAQ() {
         'nesciunt ipsum debitis quas aliquid. Reprehenderit, quia. Quo neque',
     },
   ]
+  const parentVariants = {
+    hidden: { opacity: 1 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.7 } },
+  }
+  const childrenVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { type: 'easeIn', duration: 0.6 },
+    },
+  }
+  const circleVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { delay: 2 } },
+  }
   return (
     <AnimateSharedLayout>
-      <div className="hidden lg:block circle circle1"></div>
-      <div className="hidden lg:block circle circle2"></div>
-      <motion.section className="faq-container">
-        <h1>FAQ</h1>
-        <p className="text-center px-2 sm:px-0 ">
+      <motion.div
+        variants={circleVariants}
+        initial="hidden"
+        animate="visible"
+        className="hidden lg:block circle circle1"
+      ></motion.div>
+      <motion.div
+        variants={circleVariants}
+        initial="hidden"
+        animate="visible"
+        className="hidden lg:block circle circle2"
+      ></motion.div>
+      <motion.section
+        variants={parentVariants}
+        initial="hidden"
+        animate="visible"
+        className="faq-container"
+      >
+        <motion.h1 variants={childrenVariants}>FAQ</motion.h1>
+        <motion.p
+          variants={childrenVariants}
+          className="text-center px-2 sm:px-0 "
+        >
           Find your answers for the most asked questions
-        </p>
+        </motion.p>
 
         <div className="faq-inner">
-          <motion.ul layout>
+          <motion.ul variants={childrenVariants} layout>
             {data.map((element) => {
               return (
                 <Item question={element.question} answer={element.answer} />

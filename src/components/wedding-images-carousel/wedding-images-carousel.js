@@ -27,7 +27,10 @@ function WeddingImagesCarousel() {
                   setSelected(item)
                 }}
                 onMouseLeave={() => setIsVisible(true)}
-                whileHover={{ width: '200px', transition: { duration: 0.4 } }}
+                whileHover={{
+                  width: '200px',
+                  transition: { duration: 0.5 },
+                }}
                 className="wedding-image"
               ></motion.div>
             )
