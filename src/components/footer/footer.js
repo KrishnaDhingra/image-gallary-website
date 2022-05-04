@@ -1,6 +1,5 @@
 import React from 'react'
 import './footer.css'
-// import FooterLogo from './footer-logo.png'
 import { BsInstagram } from 'react-icons/bs'
 import { FiFacebook } from 'react-icons/fi'
 import { FiTwitter } from 'react-icons/fi'
@@ -13,7 +12,6 @@ function Footer() {
     <footer className="home-footer">
       <div className="footer-top">
         <div>
-          {/* <FooterLogo /> */}
           <p>
             Every wedding has its own unique sense of style and personality, our
             cinematic approach is to be non-directorial and more observative

@@ -1,18 +1,50 @@
 import React from 'react'
 import './Enter.css'
+import { motion, AnimatePresence } from 'framer-motion'
 import OoakImage from '../../utilities/ooak-image.svg'
 
 function Enter() {
+  const Parent = {
+    hidden: { opacity: 1 },
+    visible: { opacity: 1 },
+    exit4: { opacity: 0, y: '100vh', transition: { duration: 0.4 } },
+  }
+  const LeftRight = {
+    hidden: { opacity: 0, y: '100vh' },
+    visible: { opacity: 1, y: '0', transition: { delay: 1, duration: 0.5 } },
+  }
+  const Bottom = {
+    hidden: { opacity: 0, x: '100vw' },
+    visible: { opacity: 1, x: '0', transition: { delay: 1.5, duration: 0.5 } },
+  }
+  const Top = {
+    hidden: { opacity: 0, x: '100vw' },
+    visible: { opacity: 1, x: '0', transition: { delay: 1.6, duration: 0.5 } },
+  }
+  const Center = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { type: 'FadeIn', duration: 0.5 },
+    },
+  }
   return (
-    <main className="absolute top-0 left-0 min-h-screen w-screen enter-main bg-[#0e1630] flex justify-center items-center">
+    <motion.main
+      variants={Parent}
+      initial="hidden"
+      animate="visible"
+      exit="exit4"
+      className="absolute z-[10000] top-0 left-0 min-h-screen w-screen enter-main bg-[#0e1630] flex justify-center items-center"
+    >
       <section className="enter-content">
-        <div className="right"></div>
-        <div className="left"></div>
-        <div className="top"></div>
-        <div className="bottom"></div>
-        <img src={OoakImage} alt="Ooak Image" />
+        <motion.div variants={LeftRight} className="right"></motion.div>
+        <motion.div variants={LeftRight} className="left"></motion.div>
+        <motion.div variants={Top} className="top"></motion.div>
+        <motion.div variants={Bottom} className="bottom"></motion.div>
+        <motion.img variants={Center} src={OoakImage} alt="Ooak Image" />
       </section>
-    </main>
+    </motion.main>
   )
 }
 export default Enter
