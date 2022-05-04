@@ -3,13 +3,15 @@ import HomeTopBar from '../components/home-top-bar/HomeTopBar'
 import HomeBigButton from '../components/HomeBigButton/homebigbutton'
 import Counter from '../components/counter/counter'
 import HomePhotoSamplesContainer from '../components/home-photo-samples/home-photo-samples'
+import Footer from '../components/footer/footer'
 function Home() {
   return (
-    <div className="flex flex-col mt-[6rem] sm:mt-[10rem]">
+    <div className="relative flex flex-col mt-[6rem] sm:mt-[9rem]">
       <HomeTopBar />
       <HomeBigButton />
       <Counter />
       <HomePhotoSamplesContainer />
+      <Footer />
     </div>
   )
 }

@@ -87,9 +87,9 @@ const SideBar = () => {
         {/* <span className="sidebar-text text-white text-sm">
         Follow OOAK Photography
       </span> */}
-        <BsInstagram className="text-white text-xs sm:text-sm" />
-        <FiFacebook className="text-white text-sm sm:text-md" />
-        <FiTwitter className="text-white text-xs sm:text-sm" />
+        <BsInstagram className="sidebar-icon text-white text-xs sm:text-sm" />
+        <FiFacebook className="sidebar-icon text-white text-sm sm:text-md" />
+        <FiTwitter className="sidebar-icon text-white text-xs sm:text-sm" />
       </div>
     </motion.section>
   )
