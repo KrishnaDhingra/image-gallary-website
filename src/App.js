@@ -8,6 +8,7 @@ import Home from './pages/home'
 import FAQ from './components/faq/faq'
 import Wedding from './pages/wedding'
 import Blog from './components/blog/blog'
+import Pricing from './components/pricing/pricing'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 function App() {
   const [loading, setLoading] = useState(true)
@@ -31,6 +32,7 @@ function App() {
             <Route path="/faq" element={<FAQ />} />
             <Route path="/wedding" element={<Wedding />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/pricing" element={<Pricing />} />
           </Routes>
         )}
       </AnimatePresence>

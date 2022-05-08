@@ -11,7 +11,7 @@
   width: 112px;
   height: 100%;
   position: relative;
-  background-image: url('https://wallpaperaccess.com/full/775987.jpg');
+  background-image: url('https://images.pexels.com/photos/235986/pexels-photo-235986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -22,7 +22,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(204, 204, 204, 0.6);
+  background-color: rgba(204, 204, 204, 0.4);
   -webkit-transition: background-color 0.4s;
   -ms-transition: background-color 0.4s;
   transition: background-color 0.4s;
