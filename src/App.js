@@ -7,6 +7,7 @@ import WhatHappeningSidePopup from './components/what-happening-sidepopup/what-h
 import Home from './pages/home'
 import FAQ from './components/faq/faq'
 import Wedding from './pages/wedding'
+import Blog from './components/blog/blog'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 function App() {
   const [loading, setLoading] = useState(true)
@@ -22,13 +23,14 @@ function App() {
       <Navbar />
       <AnimatePresence>
         {loading ? (
-          <Enter />
+          <Enter key="enter-animation" />
         ) : (
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/enter" element={<Enter />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/wedding" element={<Wedding />} />
+            <Route path="/blog" element={<Blog />} />
           </Routes>
         )}
       </AnimatePresence>

@@ -1,5 +1,6 @@
 :root {
   --circles-size: 9.3rem;
+  --main-bg-color: #a67665;
 }
 
 .faq-container {
@@ -16,7 +17,7 @@
   height: var(--circles-size);
   aspect-ratio: 1/1;
   border-radius: 50%;
-  background-color: #b5406c;
+  background-color: var(--main-bg-color);
 }
 .circle2 {
   top: calc(100% - var(--circles-size) - 0.5rem);

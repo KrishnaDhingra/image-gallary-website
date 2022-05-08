@@ -57,7 +57,7 @@ function Navbar() {
     { text: 'Location', redirect: '/' },
     { text: 'Book Now', redirect: '/' },
     { text: 'FAQ', redirect: '/faq' },
-    { text: 'Blog', redirect: '/' },
+    { text: 'Blog', redirect: '/blog' },
     { text: 'Pricing', redirect: '/' },
   ]
   return (

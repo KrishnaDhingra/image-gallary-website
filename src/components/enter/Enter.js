@@ -7,7 +7,7 @@ function Enter() {
   const Parent = {
     hidden: { opacity: 1 },
     visible: { opacity: 1 },
-    exit4: { opacity: 0, y: '100vh', transition: { duration: 0.4 } },
+    exit4: { opacity: 0, transition: { duration: 0.4 } },
   }
   const LeftRight = {
     hidden: { opacity: 0, y: '100vh' },

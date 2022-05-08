@@ -1,0 +1,41 @@
+:root {
+  --circles-size: 9.3rem;
+  --main-bg-color: #a67665;
+}
+
+.blog-container {
+  margin-block: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(1300px, 95%);
+  margin-inline: auto;
+}
+.trending-container {
+  margin-top: 5rem;
+  display: flex;
+  gap: 2rem;
+}
+.trending-info h1 {
+  font-size: 48px;
+  line-height: 1;
+  margin-top: 0.35rem;
+  margin-bottom: 1.3rem;
+}
+.bottom-container-circle {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  border: 0.3rem solid var(--main-bg-color);
+}
+.blog-info .bottom-container-circle {
+  height: 3rem;
+  width: 3rem;
+}
+.blog-inner {
+  display: grid;
+  margin-block: 8.5rem;
+  width: min(1100px, 100%);
+  gap: 4.9rem;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+}
