@@ -83,13 +83,19 @@ const SideBar = () => {
       className="popup-sidebar flex flex-col justify-between h-screen"
     >
       <CgClose className="text-white text-md" />
-      <div className="flex flex-col gap-7 sidebar-bottom items-center">
+      <div className="flex flex-col gap-7 sidebar-bottom items-center cursor-pointer">
         {/* <span className="sidebar-text text-white text-sm">
         Follow OOAK Photography
       </span> */}
-        <BsInstagram className="sidebar-icon text-white text-xs sm:text-sm" />
-        <FiFacebook className="sidebar-icon text-white text-sm sm:text-md" />
-        <FiTwitter className="sidebar-icon text-white text-xs sm:text-sm" />
+        <a href="">
+          <BsInstagram className="sidebar-icon text-white text-xs sm:text-sm" />
+        </a>
+        <a href="">
+          <FiFacebook className="sidebar-icon text-white text-sm sm:text-md" />
+        </a>
+        <a href="">
+          <FiTwitter className="sidebar-icon text-white text-xs sm:text-sm" />
+        </a>
       </div>
     </motion.section>
   )

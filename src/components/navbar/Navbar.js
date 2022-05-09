@@ -95,7 +95,7 @@ function Navbar() {
 
         <section className="px-[1rem] sm:px-[2rem] lg:px-[3rem]">
           <FaRegBell
-            className="bell text-2xl"
+            className="bell text-2xl cursor-pointer"
             data-visible={navbarVisible}
             onClick={() => {
               setNavbarVisible(false)
@@ -106,7 +106,7 @@ function Navbar() {
             <img src={Logo} alt="" />
           </div>
           <div
-            className="hamburger"
+            className="hamburger cursor-pointer"
             data-visible={navbarVisible}
             onClick={() => {
               setSideBarVisible(false)

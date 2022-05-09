@@ -18,9 +18,9 @@ function Footer() {
             while making our clients feel inspired, relaxed, and connected
           </p>
           <div className="flex gap-6">
-            <BsInstagram />
-            <FiFacebook />
-            <FiTwitter />
+            <BsInstagram className="cursor-pointer" />
+            <FiFacebook className="cursor-pointer" />
+            <FiTwitter className="cursor-pointer" />
           </div>
         </div>
         <div>
