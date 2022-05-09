@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import WhatYouGetChart from './what-you-get-chart'
 import './pricing.css'
 
 function Pricing() {
@@ -38,6 +39,8 @@ function Pricing() {
           </div>
         </article>
       </section>
+
+      <WhatYouGetChart />
     </main>
   )
 }

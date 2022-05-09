@@ -1,0 +1,56 @@
+:root {
+  --main-bg-color: #a67665;
+  --coloums-height: 5.5rem;
+  --section-vertical-padding: 3rem;
+  --odd-columns-color: #fbf7f8;
+}
+.what-you-get-chart-container {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 1.4fr;
+  grid-template-rows: 6rem 1fr 5rem;
+  width: min(800px, 95%);
+}
+.what-you-get-sidebar {
+  padding-block: var(--section-vertical-padding);
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+  background-color: var(--main-bg-color);
+  border-radius: 25px;
+}
+.basic-package-heading {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+.customized-package-heading {
+  grid-column: 3 / -1;
+  grid-row: 1 / 2;
+}
+.what-you-get-sidebar > .sidebar-text-container {
+  height: var(--coloums-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.basic-package-availability .check-square,
+.customized-package-availability .check-square {
+  height: var(--coloums-height);
+  font-size: 1.5rem;
+  display: flex;
+}
+.basic-package-availability > div:nth-child(odd),
+.customized-package-availability > div:nth-child(odd) {
+  background-color: var(--odd-columns-color);
+}
+.basic-package-availability {
+  padding-block: var(--section-vertical-padding);
+  grid-row: 2 / -1;
+  grid-column: 2 / 3;
+  background-color: white;
+}
+.customized-package-availability {
+  padding-block: var(--section-vertical-padding);
+  grid-row: 2 / -1;
+  grid-column: 3 / -1;
+  background-color: white;
+}
