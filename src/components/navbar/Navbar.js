@@ -23,8 +23,8 @@ function Navbar() {
     visible: {
       y: '0%',
       transition: {
-        ease: 'easeOut',
-        duration: 0.3,
+        ease: [0.6, 0, 0.1, 1],
+        duration: 0.5,
         staggerChildren: 0.09,
       },
     },

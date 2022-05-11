@@ -14,7 +14,7 @@ function WhatHappeningSidePopup({ onSelect }) {
     visible: {
       x: '0%',
       transition: {
-        ease: 'easeOut',
+        ease: [0.6, 0, 0.1, 1],
         duration: 0.4,
       },
     },
@@ -64,9 +64,9 @@ const SideBar = () => {
       x: '0%',
       opacity: 1,
       transition: {
-        ease: 'easeOut',
+        ease: [0.6, 0, 0.1, 1],
         duration: 0.4,
-        delay: 0.35,
+        delay: 0.25,
       },
     },
     exit: {
@@ -108,7 +108,7 @@ const Article = () => {
       x: '0%',
       opacity: 1,
       transition: {
-        ease: 'easeOut',
+        ease: [0.6, 0, 0.1, 1],
         duration: 0.4,
         delay: 0.2,
       },

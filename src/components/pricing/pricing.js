@@ -4,31 +4,67 @@ import WhatYouGetChart from './what-you-get-chart'
 import './pricing.css'
 
 function Pricing() {
+  const parentVariants = {
+    hidden: { opacity: 1 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.7 } },
+  }
+  const childrenVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { ease: [0.6, 0, 0.1, 1], duration: 0.6 },
+    },
+  }
+  const circleVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { delay: 2 } },
+  }
+
   return (
-    <main className="pricing-container">
-      <h1 className="pricing-heading">Pricing</h1>
-      <p className="text-center">
+    <motion.main
+      className="pricing-container"
+      variants={parentVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      <motion.div
+        variants={circleVariants}
+        initial="hidden"
+        animate="visible"
+        className="hidden lg:block circle circle1"
+      ></motion.div>
+      <motion.div
+        variants={circleVariants}
+        initial="hidden"
+        animate="visible"
+        className="hidden lg:block circle circle2"
+      ></motion.div>
+      <motion.h1 variants={childrenVariants} className="pricing-heading">
+        Pricing
+      </motion.h1>
+      <motion.p variants={childrenVariants} className="text-center">
         Find your answers for the most asked questions
-      </p>
-      <section className="pricing-inner">
+      </motion.p>
+      <motion.section className="pricing-inner" variants={childrenVariants}>
         <article className="basic-package">
           <p className="top-banner">Basic Package</p>
           <div className="pricing-content-container">
             <div className="my-[2rem]">
-              <h1 className="font-semibold">
+              <h1 className="basic-package-price font-semibold">
                 ₹2.45 <h3 className="inline">Lakh</h3>
               </h1>
-              <h4>$3192 | €2865</h4>
+              <h4 className="basic-package-price">$3192 | €2865</h4>
             </div>
-            <p className="my-4">Inclusive of</p>
+            <p className="my-4 basic-package-points-heading">Inclusive of</p>
             <BasicPackagePoints />
 
-            <button>Book Now</button>
+            <button className="basic-package-button">Book Now</button>
           </div>
         </article>
 
         <article className="customized-package">
-          <p className="top-banner">Basic Package</p>
+          <p className="top-banner">Customized Package</p>
           <div className="pricing-content-container">
             <h1 className="font-semibold text-[36px] text-white">Let's Talk</h1>
             <p className="text-white my-3">
@@ -38,10 +74,10 @@ function Pricing() {
             <button>Get Quote</button>
           </div>
         </article>
-      </section>
+      </motion.section>
 
       <WhatYouGetChart />
-    </main>
+    </motion.main>
   )
 }
 function BasicPackagePoints() {
@@ -54,7 +90,7 @@ function BasicPackagePoints() {
     'Premium album',
   ]
   return (
-    <ul>
+    <ul className="basic-package-points-container">
       {points.map((item) => {
         return <li key={item}>{item}</li>
       })}

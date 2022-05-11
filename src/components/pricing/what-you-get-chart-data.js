@@ -1,7 +1,7 @@
 export const data = [
   {
     providing: 'Lorem Ispum',
-    isBasicPackageAvailable: false,
+    isBasicPackageAvailable: true,
     isCustomizedPackageAvailable: true,
   },
   {

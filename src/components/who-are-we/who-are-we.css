@@ -1,0 +1,26 @@
+.who-are-we-container {
+  display: grid;
+  width: min(1300px, 95%);
+  grid-template-columns: 1fr 1.8fr;
+  margin-top: 12rem;
+  gap: 6rem;
+}
+.who-are-we-side-articles-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(20rem, 1fr));
+  gap: 3rem;
+}
+@media only screen and (max-width: 1200px) {
+  .who-are-we-container {
+    display: grid;
+    width: min(1300px, 95%);
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
+}
+@media only screen and (max-width: 730px) {
+  .who-are-we-side-articles-container {
+    grid-template-columns: 1fr;
+    padding-inline: 2rem;
+  }
+}

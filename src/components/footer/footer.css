@@ -4,15 +4,13 @@
 .home-footer {
   display: flex;
   flex-direction: column;
-  position: absolute;
   width: 100vw;
-  bottom: 0;
-  left: 0;
   gap: 3rem;
   background-color: var(--footer-bg-color);
   padding-inline: 6.375rem;
   padding-top: 7rem;
   padding-bottom: 3.5rem;
+  margin-top: 8rem;
 }
 .footer-top {
   display: grid;

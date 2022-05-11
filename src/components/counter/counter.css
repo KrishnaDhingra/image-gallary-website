@@ -6,7 +6,7 @@
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
   align-items: center;
   justify-items: space-between;
-  margin-block: 8rem;
+  margin-top: 10rem;
 }
 .counter-container > * {
   display: flex;

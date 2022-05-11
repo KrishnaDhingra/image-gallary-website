@@ -89,6 +89,9 @@ nav section {
   nav section {
     padding-top: 0.7rem;
   }
+  nav ul li a span {
+    font-size: 1.3rem;
+  }
   .hamburger,
   .bell {
     transform: scale(0.7, 0.7);

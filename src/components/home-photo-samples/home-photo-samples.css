@@ -4,6 +4,7 @@
 .main-samples-container {
   display: flex;
   flex-direction: column;
+  margin-top: 8rem;
 }
 .samples-inner {
   width: min(1000px, 90%);

@@ -2,10 +2,11 @@
   --main-bg-color: #a67665;
   --coloums-height: 5.5rem;
   --section-vertical-padding: 3rem;
-  --odd-columns-color: #fbf7f8;
+  --odd-columns-color: #fff9fb;
 }
 .what-you-get-chart-container {
   display: grid;
+  margin-top: 7rem;
   grid-template-columns: 1fr 1.4fr 1.4fr;
   grid-template-rows: 6rem 1fr 5rem;
   width: min(800px, 95%);

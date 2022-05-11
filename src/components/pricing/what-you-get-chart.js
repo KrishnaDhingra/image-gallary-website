@@ -1,5 +1,6 @@
 import React from 'react'
 import './what-you-get-chart.css'
+import { motion } from 'framer-motion'
 import { data } from './what-you-get-chart-data'
 import { FiCheckSquare } from 'react-icons/fi'
 

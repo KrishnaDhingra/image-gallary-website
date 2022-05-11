@@ -4,7 +4,7 @@ import SamplePhoto from '../../utilities/sample-photo.png'
 
 function HomePhotoSamplesContainer() {
   return (
-    <section className="main-samples-container mb-[46rem]">
+    <section className="main-samples-container">
       {[1, 2, 3, 4].map((item) => {
         return (
           <div className="samples-inner">

@@ -1,5 +1,5 @@
 :root {
-  --bar-width: 6vw;
+  --bar-width: 5vw;
 }
 .enter-content .right,
 .enter-content .left,
@@ -14,7 +14,7 @@
   left: 0;
   width: var(--bar-width);
   height: 100vh;
-  background-image: linear-gradient(#600b87, #a34f8b);
+  background-image: linear-gradient(#a77765, #de9a5d);
   z-index: 999999;
 }
 .enter-content .left {
@@ -22,7 +22,7 @@
   width: var(--bar-width);
   height: 100vh;
   right: 0;
-  background-image: linear-gradient(#600b87, #a34f8b);
+  background-image: linear-gradient(#a77765, #de9a5d);
   z-index: 999999;
 }
 .enter-content .top {
@@ -30,12 +30,12 @@
   height: var(--bar-width);
   width: 100vw;
   right: 0;
-  background-image: linear-gradient(#600b87, #691488);
+  background-image: linear-gradient(#a77765, #aa7864);
 }
 .enter-content .bottom {
   bottom: 0;
   height: var(--bar-width);
   width: 100vw;
   right: 0;
-  background-image: linear-gradient(#96428a, #a34f8b);
+  background-image: linear-gradient(#d4935e, #de9a5d);
 }

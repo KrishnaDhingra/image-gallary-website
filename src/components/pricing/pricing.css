@@ -87,3 +87,35 @@
   background-color: white;
   color: var(--main-bg-color);
 }
+
+/* hover effect for basic package */
+.basic-package,
+.basic-package > *,
+.basic-package > *::before,
+.basic-package > *::after {
+  transition: all 0.2s;
+}
+.basic-package:hover {
+  transform: scale(1.02, 1.02);
+  background-color: var(--main-bg-color);
+}
+.basic-package:hover .top-banner {
+  background-color: white;
+  color: var(--main-bg-color);
+}
+.basic-package:hover .basic-package-price {
+  color: white;
+}
+.basic-package:hover .basic-package-points-container {
+  color: white;
+}
+.basic-package:hover .basic-package-button {
+  background-color: white;
+  color: var(--main-bg-color);
+}
+.basic-package:hover .basic-package-points-heading {
+  color: white;
+}
+.basic-package:hover .pricing-content-container ul li::before {
+  color: white;
+}

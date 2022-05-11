@@ -19,7 +19,7 @@ function Enter() {
   }
   const Top = {
     hidden: { opacity: 0, x: '100vw' },
-    visible: { opacity: 1, x: '0', transition: { delay: 1.6, duration: 0.5 } },
+    visible: { opacity: 1, x: '0', transition: { delay: 1.65, duration: 0.5 } },
   }
   const Center = {
     hidden: { opacity: 0, y: 40 },
@@ -35,14 +35,19 @@ function Enter() {
       initial="hidden"
       animate="visible"
       exit="exit4"
-      className="absolute z-[10000] top-0 left-0 min-h-screen w-screen enter-main bg-[#0e1630] flex justify-center items-center"
+      className="absolute z-[10000] top-0 left-0 min-h-screen w-screen enter-main bg-white flex justify-center items-center"
     >
       <section className="enter-content">
         <motion.div variants={LeftRight} className="right"></motion.div>
         <motion.div variants={LeftRight} className="left"></motion.div>
         <motion.div variants={Top} className="top"></motion.div>
         <motion.div variants={Bottom} className="bottom"></motion.div>
-        <motion.img variants={Center} src={OoakImage} alt="Ooak Image" />
+        <motion.img
+          className="w-[380px]"
+          variants={Center}
+          src={OoakImage}
+          alt="Ooak Image"
+        />
       </section>
     </motion.main>
   )

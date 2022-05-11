@@ -1,50 +1,20 @@
 import React, { useState } from 'react'
 import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion'
+import { data } from './faq-data'
 import './faq.css'
 
 function FAQ() {
-  const data = [
-    {
-      question: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-      answer:
-        'nesciunt ipsum debitis quas aliquid. Reprehenderit, quia. Quo neque',
-    },
-    {
-      question: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-      answer:
-        'nesciunt ipsum debitis quas aliquid. Reprehenderit, quia. Quo neque',
-    },
-    {
-      question: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-      answer:
-        'nesciunt ipsum debitis quas aliquid. Reprehenderit, quia. Quo neque',
-    },
-    {
-      question: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-      answer:
-        'nesciunt ipsum debitis quas aliquid. Reprehenderit, quia. Quo neque',
-    },
-    {
-      question: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-      answer:
-        'nesciunt ipsum debitis quas aliquid. Reprehenderit, quia. Quo neque',
-    },
-    {
-      question: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-      answer:
-        'nesciunt ipsum debitis quas aliquid. Reprehenderit, quia. Quo neque',
-    },
-  ]
   const parentVariants = {
     hidden: { opacity: 1 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.7 } },
+    visible: { opacity: 1, transition: { staggerChildren: 0.6 } },
   }
   const childrenVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { type: 'easeIn', duration: 0.6 },
+
+      transition: { ease: [0.6, 0, 0.1, 1], duration: 0.6 },
     },
   }
   const circleVariants = {
