@@ -1,0 +1,13 @@
+.testimonials-container {
+  display: grid;
+  width: min(1300px, 95%);
+  /* border: 2px solid black; */
+  grid-template-columns: 1fr 1.6fr;
+  gap: 4rem;
+  margin-top: 8rem;
+}
+@media only screen and (max-width: 1024px) {
+  .testimonials-container {
+    grid-template-columns: 1fr;
+  }
+}

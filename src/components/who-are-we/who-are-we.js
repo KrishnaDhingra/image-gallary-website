@@ -8,7 +8,7 @@ function WhoAreWe() {
         <h1 className="text-[48px] lg:text-[60px] font-semibold">
           Who are we?
         </h1>
-        <p>
+        <p className="mt-3">
           Your wedding day is the culmination of a unique love story that
           transcends time. To memorialise this auspicious occasion, our
           photographers have the flair and skill to visually tell the story of

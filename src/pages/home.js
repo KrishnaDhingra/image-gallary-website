@@ -5,6 +5,7 @@ import Counter from '../components/counter/counter'
 import WhoAreWe from '../components/who-are-we/who-are-we'
 import HomePhotoSamplesContainer from '../components/home-photo-samples/home-photo-samples'
 import Footer from '../components/footer/footer'
+import Testimonials from '../components/testimonials/testimonials'
 function Home() {
   return (
     <div className="relative flex flex-col mt-[6rem] sm:mt-[9rem]">
@@ -13,6 +14,7 @@ function Home() {
       <Counter />
       <WhoAreWe />
       <HomePhotoSamplesContainer />
+      <Testimonials />
       <Footer />
     </div>
   )

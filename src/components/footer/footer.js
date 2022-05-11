@@ -9,8 +9,8 @@ import { BsFillTelephoneFill } from 'react-icons/bs'
 
 function Footer() {
   return (
-    <footer className="home-footer">
-      <div className="footer-top">
+    <footer className="home-footer px-[3rem] xl:px-[6.375rem]">
+      <div className="footer-top gap-[4rem] xl:gap-[8rem]">
         <div>
           <p>
             Every wedding has its own unique sense of style and personality, our
@@ -66,7 +66,7 @@ function Footer() {
         <span className="copyright">
           Copyright © 2022 OOAK. All rights reserved
         </span>
-        <div>
+        <div className="hidden xl:flex gap-[2.5rem]">
           {[
             'Weddings',
             'Engagement',

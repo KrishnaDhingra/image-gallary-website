@@ -7,7 +7,6 @@
   width: 100vw;
   gap: 3rem;
   background-color: var(--footer-bg-color);
-  padding-inline: 6.375rem;
   padding-top: 7rem;
   padding-bottom: 3.5rem;
   margin-top: 8rem;
@@ -15,7 +14,6 @@
 .footer-top {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  gap: 8rem;
 }
 .home-footer div {
   color: white;
@@ -61,7 +59,8 @@
   display: flex;
   justify-content: space-between;
 }
-.home-footer .bottom div {
-  display: flex;
-  gap: 2.5rem;
+@media only screen and (max-width: 930px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
 }
