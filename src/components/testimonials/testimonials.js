@@ -59,7 +59,7 @@ function Testimonial({ image, text, fromUser, next, previous }) {
         className="hidden sm:inline shrink-0 text-xl hover:text-gray-400"
       />
       <img
-        className="self-start m-auto max-w-[19rem] sm:max-w-[13rem] lg:max-w-[17rem] object-cover aspect-video sm:aspect-square"
+        className="self-start m-auto max-h-[19rem] max-w-[19rem] sm:max-w-[13rem] lg:max-w-[17rem] object-cover aspect-video sm:aspect-square"
         src={image}
         alt=""
       />

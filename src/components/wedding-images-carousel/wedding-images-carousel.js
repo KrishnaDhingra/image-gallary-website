@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import './wedding-images-carousel.css'
 import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion'
 
-function WeddingImagesCarousel() {
+function WeddingImagesCarousel({ visible }) {
   const [selected, setSelected] = useState('')
+
   const [isVisible, setIsVisible] = useState(true)
   const items = [
     'Hindu',
@@ -16,7 +17,7 @@ function WeddingImagesCarousel() {
   ]
   return (
     <AnimateSharedLayout>
-      <div className="flex flex-col items-center gap-24">
+      <div key={visible} className="flex flex-col items-center gap-24">
         <motion.section layout className="WeddingImagesCarousel">
           {items.map((item) => {
             return (
