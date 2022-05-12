@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import './Navbar.css'
-import { motion, AnimatePresence, AnimateSharedLayout } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { FaRegBell } from 'react-icons/fa'
-import { IoIosArrowBack } from 'react-icons/io'
-import { Link } from 'react-router-dom'
+import { ulVariants } from './ulVariants'
 import Logo from '../../utilities/enter-image.png'
 import Backdrop from '../backdrop'
+import NavbarLink from './NavbarLink'
+import SubMenuLink from './SubMenuLink'
 import WhatHappeningSidePopup from '../what-happening-sidepopup/what-happening-sidepopup'
 
 function Navbar() {
@@ -19,25 +20,6 @@ function Navbar() {
     setSideBarVisible(false)
   }
 
-  const ul = {
-    hidden: { y: '-100%' },
-    visible: {
-      y: '0%',
-      transition: {
-        ease: [0.6, 0, 0.1, 1],
-        duration: 0.5,
-        staggerChildren: 0.09,
-      },
-    },
-    exit: {
-      y: '-100%',
-      transition: {
-        ease: 'easeIn',
-        duration: 0.4,
-      },
-    },
-  }
-
   return (
     <>
       <nav className="z-100">
@@ -46,7 +28,7 @@ function Navbar() {
             <Backdrop onSelect={toggleNavbarVisibility}>
               <motion.ul
                 onClick={(e) => e.stopPropagation()}
-                variants={ul}
+                variants={ulVariants}
                 initial="hidden"
                 animate="visible"
                 exit="exit"
@@ -126,83 +108,5 @@ function Navbar() {
       </AnimatePresence>
     </>
   )
-}
-
-function NavbarLink({ onClick, text, redirect }) {
-  return (
-    <motion.li onClick={onClick} variants={itemVariants()}>
-      <Link to={redirect}>
-        <span>{text}</span>
-      </Link>
-    </motion.li>
-  )
-}
-
-function SubMenuLink({ onClick, redirect, text }) {
-  const [subMenuVisible, setSubMenuVisible] = useState(false)
-
-  const parentVariants = {
-    hidden: false,
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.09,
-      },
-    },
-    exit: {
-      opacity: 0,
-      transition: {
-        duration: 0.2,
-      },
-    },
-  }
-  return (
-    <div className="flex flex-col relative">
-      <motion.li className="flex gap-4" variants={itemVariants()}>
-        <Link onClick={onClick} to={redirect}>
-          <span>{text}</span>
-        </Link>
-        <IoIosArrowBack
-          onClick={() => setSubMenuVisible(!subMenuVisible)}
-          className="hover:text-gray-400 text-white -rotate-90"
-        />
-      </motion.li>
-      <AnimatePresence>
-        {subMenuVisible && (
-          <motion.div
-            variants={parentVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            className="relative sm:absolute top-[110%] sm:left-[-10%] text-white flex flex-col my-3 sm:my-0 sm:flex-row gap-3"
-          >
-            {['Chennai', 'Coimabatore', 'Bangalore'].map((item) => {
-              return (
-                <motion.span className="text-center" variants={itemVariants()}>
-                  {item}
-                </motion.span>
-              )
-            })}
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  )
-}
-
-const itemVariants = () => {
-  return {
-    hidden: {
-      opacity: 0,
-      y: -5,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        ease: 'easeOut',
-      },
-    },
-  }
 }
 export default Navbar
