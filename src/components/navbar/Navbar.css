@@ -32,7 +32,7 @@ nav section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 2rem;
+  padding-top: 0rem;
 }
 .hamburger {
   display: flex;
@@ -86,9 +86,6 @@ nav section {
   }
 }
 @media only screen and (max-width: 600px) {
-  nav section {
-    padding-top: 0.7rem;
-  }
   nav ul li a span {
     font-size: 1.3rem;
   }

@@ -1,7 +1,7 @@
 import React from 'react'
 import './Enter.css'
 import { motion, AnimatePresence } from 'framer-motion'
-import OoakImage from '../../utilities/ooak-image.svg'
+import EnterImage from '../../utilities/enter-image.png'
 
 function Enter() {
   const Parent = {
@@ -45,7 +45,7 @@ function Enter() {
         <motion.img
           className="w-[380px]"
           variants={Center}
-          src={OoakImage}
+          src={EnterImage}
           alt="Ooak Image"
         />
       </section>

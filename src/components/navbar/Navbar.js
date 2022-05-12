@@ -4,7 +4,7 @@ import { motion, AnimatePresence, AnimateSharedLayout } from 'framer-motion'
 import { FaRegBell } from 'react-icons/fa'
 import { IoIosArrowBack } from 'react-icons/io'
 import { Link } from 'react-router-dom'
-import Logo from '../../utilities/navbar-logo.svg'
+import Logo from '../../utilities/enter-image.png'
 import Backdrop from '../backdrop'
 import WhatHappeningSidePopup from '../what-happening-sidepopup/what-happening-sidepopup'
 
@@ -103,7 +103,7 @@ function Navbar() {
             }}
           />
           <div className="logo">
-            <img src={Logo} alt="" />
+            <img className="max-w-[9rem]" src={Logo} alt="" />
           </div>
           <div
             className="hamburger cursor-pointer"
