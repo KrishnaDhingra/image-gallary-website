@@ -2,27 +2,20 @@ import React, { useState } from 'react'
 import './wedding-images-carousel.css'
 import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion'
 
-function WeddingImagesCarousel({ visible }) {
+function WeddingImagesCarousel({ visible, items, defaultHeading }) {
   const [selected, setSelected] = useState('')
 
   const [isVisible, setIsVisible] = useState(true)
-  const items = [
-    'Hindu',
-    'Muslim',
-    'Buddhist',
-    'Jain',
-    'Sikh',
-    'Hindu',
-    'Muslim',
-  ]
+
   return (
     <AnimateSharedLayout>
       <div key={visible} className="flex flex-col items-center gap-24">
         <motion.section layout className="WeddingImagesCarousel">
-          {items.map((item) => {
+          {items.map((item, index) => {
             return (
               <motion.div
                 layout
+                key={index}
                 onMouseEnter={() => {
                   setIsVisible(false)
                   setSelected(item)
@@ -38,13 +31,17 @@ function WeddingImagesCarousel({ visible }) {
           })}
         </motion.section>
         <AnimatePresence>
-          {isVisible ? <DefaultHeading /> : <Heading content={selected} />}
+          {isVisible ? (
+            <DefaultHeading text={defaultHeading} />
+          ) : (
+            <Heading content={selected} />
+          )}
         </AnimatePresence>
       </div>
     </AnimateSharedLayout>
   )
 }
-function DefaultHeading() {
+function DefaultHeading({ text }) {
   return (
     <motion.h1
       className="wedding-heading"
@@ -52,7 +49,7 @@ function DefaultHeading() {
       animate={{ opacity: 1, transition: { duration: 0.4 } }}
       exit={{ opacity: 0 }}
     >
-      Weddings
+      {text}
     </motion.h1>
   )
 }

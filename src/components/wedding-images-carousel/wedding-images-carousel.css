@@ -1,8 +1,8 @@
 .WeddingImagesCarousel {
   width: max-content;
   max-width: min(1300px, 90%);
-  margin-top: 7rem;
-  height: 410px;
+  margin-top: 4rem;
+  height: 400px;
   display: flex;
   margin-inline: auto;
   gap: 1.3rem;

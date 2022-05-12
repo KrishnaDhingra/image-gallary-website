@@ -1,14 +1,15 @@
 import React from 'react'
 import './wedding-footer.css'
+import { Link } from 'react-router-dom'
 
-function WeddingFooter({ setURL, setWeddingMoreVisible }) {
+function WeddingFooter({ setMoreVisible }) {
   return (
     <footer className="wedding-footer hidden sm:flex pb-8">
-      <a href="">Services</a>
-      <a href="">Gallery</a>
-      <a onClick={() => setWeddingMoreVisible(true)}>Discover More +</a>
-      <a href="">Outdoor</a>
-      <a href="">Videos</a>
+      <Link to="/services">Services</Link>
+      <Link to="/gallery">Gallery</Link>
+      <a onClick={() => setMoreVisible(true)}>Discover More +</a>
+      <Link to="/outdoor">Outdoor</Link>
+      <Link to="/services">Videos</Link>
     </footer>
   )
 }

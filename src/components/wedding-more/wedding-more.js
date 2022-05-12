@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from 'react'
 
-function WeddingMore({ weddingMoreVisible }) {
+function WeddingMore({ setMoreVisible }) {
   const scrollRef = useRef()
 
   useEffect(() => {
     scrollRef.current?.scrollIntoView({ behavior: 'smooth' })
-  }, [weddingMoreVisible])
+  }, [setMoreVisible])
 
   return (
     <section className="my-[5rem] px-4 sm:px-6" ref={scrollRef}>
