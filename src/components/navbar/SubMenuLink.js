@@ -39,11 +39,14 @@ function SubMenuLink({ onClick, redirect, text }) {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="relative sm:absolute top-[110%] sm:left-[-10%] text-white flex flex-col my-3 sm:my-0 sm:flex-row gap-3"
+            className="relative sm:absolute top-[123%] sm:left-[-10%] text-white flex flex-col my-3 sm:my-0 sm:flex-row gap-3"
           >
             {['Chennai', 'Coimabatore', 'Bangalore'].map((item) => {
               return (
-                <motion.span className="text-center" variants={itemVariants()}>
+                <motion.span
+                  className="text-sm text-center"
+                  variants={itemVariants()}
+                >
                   {item}
                 </motion.span>
               )

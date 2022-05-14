@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import './Navbar.css'
+import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FaRegBell } from 'react-icons/fa'
+import { BiHomeAlt } from 'react-icons/bi'
 import { ulVariants } from './ulVariants'
 import Logo from '../../utilities/enter-image.png'
 import Backdrop from '../backdrop'
@@ -76,17 +78,30 @@ function Navbar() {
         </AnimatePresence>
 
         <section className="px-[1rem] sm:px-[2rem] lg:px-[3rem]">
-          <FaRegBell
-            className="bell text-2xl cursor-pointer"
-            data-visible={navbarVisible}
-            onClick={() => {
-              setNavbarVisible(false)
-              setSideBarVisible(!sidebarVisible)
-            }}
-          />
-          <div className="logo">
-            <img className="max-w-[9rem]" src={Logo} alt="" />
+          <div className="flex relative">
+            <FaRegBell
+              className="bell text-2xl cursor-pointer"
+              data-visible={navbarVisible}
+              onClick={() => {
+                setNavbarVisible(false)
+                setSideBarVisible(!sidebarVisible)
+              }}
+            />
+
+            <Link to="/">
+              <BiHomeAlt
+                className="home-icon shrink-0 text-white text-2xl absolute top-0 left-[170%] sm:left-[200%]"
+                onClick={() => {
+                  setNavbarVisible(false)
+                }}
+              />
+            </Link>
           </div>
+          <Link to="/">
+            <div className="logo">
+              <img className="max-w-[9rem]" src={Logo} alt="" />
+            </div>
+          </Link>
           <div
             className="hamburger cursor-pointer"
             data-visible={navbarVisible}
