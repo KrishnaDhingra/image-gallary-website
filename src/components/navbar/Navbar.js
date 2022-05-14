@@ -88,14 +88,16 @@ function Navbar() {
               }}
             />
 
-            <Link to="/">
-              <BiHomeAlt
-                className="home-icon shrink-0 text-white text-2xl absolute top-0 left-[170%] sm:left-[200%]"
-                onClick={() => {
-                  setNavbarVisible(false)
-                }}
-              />
-            </Link>
+            {navbarVisible && (
+              <Link to="/">
+                <BiHomeAlt
+                  className={`home-icon shrink-0 text-white text-2xl absolute top-0 left-[170%] sm:left-[200%]`}
+                  onClick={() => {
+                    setNavbarVisible(false)
+                  }}
+                />
+              </Link>
+            )}
           </div>
           <Link to="/">
             <div className="logo">

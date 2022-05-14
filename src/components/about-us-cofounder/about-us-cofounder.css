@@ -1,0 +1,19 @@
+:root {
+  --main-bg-color: #a67665;
+}
+.aboutus-cofounder-container {
+  margin-top: 7rem;
+  background-color: var(--main-bg-color);
+  padding: 5rem 0rem;
+  color: white;
+}
+.aboutus-cofounder-container .inner-container {
+  margin-inline: auto;
+  width: min(1150px, 95%);
+}
+.aboutus-cofounder-container .inner-container .inner-container-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  place-items: center;
+  gap: 5rem;
+}

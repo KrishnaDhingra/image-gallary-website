@@ -4,7 +4,6 @@ import HomeBigButton from '../components/HomeBigButton/homebigbutton'
 import Counter from '../components/counter/counter'
 import WhoAreWe from '../components/who-are-we/who-are-we'
 import HomePhotoSamplesContainer from '../components/home-photo-samples/home-photo-samples'
-import Footer from '../components/footer/footer'
 import Testimonials from '../components/testimonials/testimonials'
 function Home() {
   return (
@@ -15,7 +14,6 @@ function Home() {
       <WhoAreWe />
       <HomePhotoSamplesContainer />
       <Testimonials />
-      <Footer />
     </div>
   )
 }

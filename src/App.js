@@ -12,6 +12,8 @@ import Gallery from './pages/gallery'
 import Outdoor from './pages/outdoor'
 import Blog from './components/blog/blog'
 import Pricing from './components/pricing/pricing'
+import Footer from './components/footer/footer'
+import AboutUs from './pages/aboutUs'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 function App() {
   const [loading, setLoading] = useState(true)
@@ -39,9 +41,12 @@ function App() {
             <Route path="/outdoor" element={<Outdoor />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/pricing" element={<Pricing />} />
+            <Route path="/aboutus" element={<AboutUs />} />
           </Routes>
         )}
       </AnimatePresence>
+
+      <Footer />
     </BrowserRouter>
   )
 }

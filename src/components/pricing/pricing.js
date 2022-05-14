@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import PricingBigImage from './pricing-big-image'
 import WhatYouGetChart from './what-you-get-chart'
 import './pricing.css'
 
@@ -75,6 +76,8 @@ function Pricing() {
           </div>
         </article>
       </motion.section>
+
+      {/* <PricingBigImage /> */}
 
       <WhatYouGetChart />
     </motion.main>

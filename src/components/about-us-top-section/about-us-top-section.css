@@ -1,0 +1,16 @@
+.about-us-top-section-container {
+  margin-inline: auto;
+  width: min(1150px, 95%);
+  margin-top: 5rem;
+}
+.about-us-heading {
+  font-weight: 600;
+  font-size: 48px;
+  margin: 0 0;
+}
+.about-us-top-section-container .main-content {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+}
