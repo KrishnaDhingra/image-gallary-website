@@ -44,7 +44,7 @@ function Pricing() {
       <motion.h1 variants={childrenVariants} className="pricing-heading">
         Pricing
       </motion.h1>
-      <motion.p variants={childrenVariants} className="text-center">
+      <motion.p variants={childrenVariants} className="text-center mx-3">
         Find your answers for the most asked questions
       </motion.p>
       <motion.section className="pricing-inner" variants={childrenVariants}>
