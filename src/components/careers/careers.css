@@ -1,0 +1,64 @@
+:root {
+  --main-bg-color: #a67665;
+}
+.jobs-top-section-container {
+  margin-inline: auto;
+  width: min(1150px, 95%);
+  margin-top: 5rem;
+}
+.jobs-heading {
+  font-weight: 600;
+  font-size: 48px;
+  margin: 0 0;
+}
+.jobs-top-section-container .main-content {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+}
+.grow-with-us-container {
+  color: white;
+  padding: 5rem 0rem;
+  background-color: var(--main-bg-color);
+  margin-top: 8rem;
+}
+.grow-with-us {
+  margin-inline: auto;
+  width: min(1150px, 95%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  gap: 10rem;
+}
+.grow-with-us-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 2.5rem;
+  column-gap: 4rem;
+}
+.grow-with-us-form input {
+  color: white;
+  background-color: transparent;
+  border-bottom: 1.5px solid white;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.8rem;
+}
+.grow-with-us input:focus {
+  outline: none;
+  border-bottom: 1.5px solid rgb(184, 184, 184);
+}
+.grow-with-us-form input::placeholder {
+  color: white;
+  font-size: 0.8rem;
+}
+.grow-with-us-form .describe-yourself {
+  grid-column: 1 / -1;
+}
+.grow-with-us-form button {
+  background-color: white;
+  color: var(--main-bg-color);
+  max-width: 143px;
+  padding: 0.8rem 0rem;
+  border-radius: 0.5rem;
+}

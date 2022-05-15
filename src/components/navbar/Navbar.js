@@ -45,7 +45,7 @@ function Navbar() {
                   <NavbarLink
                     onClick={toggleNavbarVisibility}
                     text={'Jobs'}
-                    redirect={'/enter'}
+                    redirect={'/careers'}
                   />
                   <SubMenuLink
                     onClick={toggleNavbarVisibility}
@@ -85,7 +85,7 @@ function Navbar() {
               data-visible={navbarVisible}
               onClick={() => {
                 setNavbarVisible(false)
-                setSideBarVisible(!sidebarVisible)
+                setSideBarVisible(true)
               }}
             />
 
@@ -101,7 +101,7 @@ function Navbar() {
             )}
           </div>
           <Link to="/">
-            <div className="logo">
+            <div className="logo" onClick={() => setNavbarVisible(false)}>
               <img
                 className="max-w-[9rem]"
                 src={navbarVisible ? NavbarLogoWhite : NavbarLogo}

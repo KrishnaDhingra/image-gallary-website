@@ -15,6 +15,7 @@ import Pricing from './components/pricing/pricing'
 import Footer from './components/footer/footer'
 import AboutUs from './pages/aboutUs'
 import Videos from './pages/videos'
+import Careers from './components/careers/careers'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 function App() {
   const [loading, setLoading] = useState(true)
@@ -44,6 +45,7 @@ function App() {
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/aboutus" element={<AboutUs />} />
             <Route path="/videos" element={<Videos />} />
+            <Route path="/jobs" element={<Careers />} />
           </Routes>
         )}
       </AnimatePresence>
