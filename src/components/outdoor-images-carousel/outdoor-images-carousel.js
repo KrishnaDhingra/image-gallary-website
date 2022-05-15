@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import './wedding-images-carousel.css'
+import './outdoor-images-carousel.css'
 import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion'
 
-function WeddingImagesCarousel({ visible, items, defaultHeading }) {
+function OutdoorImagesCarousel({ visible, items, defaultHeading }) {
   const parentVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -12,7 +12,6 @@ function WeddingImagesCarousel({ visible, items, defaultHeading }) {
       },
     },
   }
-
   const [selected, setSelected] = useState('')
 
   const [isVisible, setIsVisible] = useState(true)
@@ -25,7 +24,7 @@ function WeddingImagesCarousel({ visible, items, defaultHeading }) {
           variants={parentVariants}
           initial="hidden"
           animate="visible"
-          className="WeddingImagesCarousel"
+          className="OutdoorImagesCarousel"
         >
           {items.map((item, index) => {
             return (
@@ -38,10 +37,10 @@ function WeddingImagesCarousel({ visible, items, defaultHeading }) {
                 }}
                 onMouseLeave={() => setIsVisible(true)}
                 whileHover={{
-                  width: '200px',
+                  width: '220px',
                   transition: { duration: 0.4 },
                 }}
-                className="wedding-image"
+                className="outdoors-image"
               ></motion.div>
             )
           })}
@@ -60,7 +59,7 @@ function WeddingImagesCarousel({ visible, items, defaultHeading }) {
 function DefaultHeading({ text }) {
   return (
     <motion.h1
-      className="wedding-heading"
+      className="outdoor-heading"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { duration: 0.4 } }}
       exit={{ opacity: 0 }}
@@ -72,7 +71,7 @@ function DefaultHeading({ text }) {
 function Heading({ content }) {
   return (
     <motion.h1
-      className="wedding-heading"
+      className="outdoor-heading"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { duration: 0.4 } }}
       exit={{ opacity: 0 }}
@@ -81,4 +80,4 @@ function Heading({ content }) {
     </motion.h1>
   )
 }
-export default WeddingImagesCarousel
+export default OutdoorImagesCarousel

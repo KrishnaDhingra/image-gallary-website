@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
-import './outdoor-images-carousel.css'
+import './videos-images-carousel.css'
 import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion'
 
-function OutdoorImagesCarousel({ visible, items, defaultHeading }) {
+function VideosImagesCarousel({ visible, items, defaultHeading }) {
   const parentVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        duration: 0.2,
+        duration: 0.4,
       },
     },
   }
@@ -24,7 +24,7 @@ function OutdoorImagesCarousel({ visible, items, defaultHeading }) {
           variants={parentVariants}
           initial="hidden"
           animate="visible"
-          className="OutdoorImagesCarousel"
+          className="VideosImagesCarousel"
         >
           {items.map((item, index) => {
             return (
@@ -40,7 +40,7 @@ function OutdoorImagesCarousel({ visible, items, defaultHeading }) {
                   width: '220px',
                   transition: { duration: 0.4 },
                 }}
-                className="outdoors-image"
+                className="videos-image"
               ></motion.div>
             )
           })}
@@ -59,7 +59,7 @@ function OutdoorImagesCarousel({ visible, items, defaultHeading }) {
 function DefaultHeading({ text }) {
   return (
     <motion.h1
-      className="outdoor-heading"
+      className="videos-heading"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { duration: 0.4 } }}
       exit={{ opacity: 0 }}
@@ -71,7 +71,7 @@ function DefaultHeading({ text }) {
 function Heading({ content }) {
   return (
     <motion.h1
-      className="outdoor-heading"
+      className="videos-heading"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { duration: 0.4 } }}
       exit={{ opacity: 0 }}
@@ -80,4 +80,4 @@ function Heading({ content }) {
     </motion.h1>
   )
 }
-export default OutdoorImagesCarousel
+export default VideosImagesCarousel
