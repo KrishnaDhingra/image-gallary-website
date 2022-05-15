@@ -5,7 +5,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { FaRegBell } from 'react-icons/fa'
 import { BiHomeAlt } from 'react-icons/bi'
 import { ulVariants } from './ulVariants'
-import Logo from '../../utilities/enter-image.png'
+import NavbarLogo from '../../utilities/enter-image.png'
+import NavbarLogoWhite from '../../utilities/navbar-logo-white.png'
 import Backdrop from '../backdrop'
 import NavbarLink from './NavbarLink'
 import SubMenuLink from './SubMenuLink'
@@ -101,7 +102,11 @@ function Navbar() {
           </div>
           <Link to="/">
             <div className="logo">
-              <img className="max-w-[9rem]" src={Logo} alt="" />
+              <img
+                className="max-w-[9rem]"
+                src={navbarVisible ? NavbarLogoWhite : NavbarLogo}
+                alt=""
+              />
             </div>
           </Link>
           <div
