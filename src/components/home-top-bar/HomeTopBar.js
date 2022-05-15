@@ -19,7 +19,7 @@ function HomeTopBar() {
           <span className="text-md discover-more">Discover More</span>
         </a>
       </div>
-      <div className="right">
+      <div className="right relative">
         <div className="relative ">
           <img className="" src={SideBarImage} alt="" />
         </div>

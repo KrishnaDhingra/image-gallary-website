@@ -36,7 +36,7 @@ function WhatHappeningSidePopup({ onSelect }) {
         exit="exit"
         className="sidepopup-container flex"
       >
-        <SideBar />
+        <SideBar onSelect={onSelect} />
 
         <section className="popup-main-content">
           <h2
@@ -57,7 +57,7 @@ function WhatHappeningSidePopup({ onSelect }) {
   )
 }
 
-const SideBar = () => {
+const SideBar = ({ onSelect }) => {
   const item = {
     hidden: { x: '-40%', opacity: 0 },
     visible: {
@@ -82,7 +82,7 @@ const SideBar = () => {
       variants={item}
       className="popup-sidebar flex flex-col justify-between h-screen"
     >
-      <CgClose className="text-white text-md" />
+      <CgClose onClick={onSelect} className="text-white text-md" />
       <div className="flex flex-col gap-7 sidebar-bottom items-center cursor-pointer">
         {/* <span className="sidebar-text text-white text-sm">
         Follow OOAK Photography

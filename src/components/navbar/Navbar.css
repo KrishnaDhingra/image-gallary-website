@@ -28,7 +28,7 @@ nav ul li a span {
 }
 nav section {
   position: relative;
-  z-index: 100;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -39,7 +39,7 @@ function Navbar() {
                   <NavbarLink
                     onClick={toggleNavbarVisibility}
                     text={'About us'}
-                    redirect={'/'}
+                    redirect={'/aboutus'}
                   />
                   <NavbarLink
                     onClick={toggleNavbarVisibility}
