@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import WeddingImagesCarousel from '../components/wedding-images-carousel/wedding-images-carousel'
+import OutdoorImagesCarousel from '../components/outdoor-images-carousel/outdoor-images-carousel'
 import OutdoorMore from '../components/outdoor-more/outdoor-more'
 import WeddingFooter from '../components/wedding-footer/wedding-footer'
 
@@ -9,7 +9,7 @@ function Outdoor() {
   const items = ['Outdoor1', 'Outdoor2', 'Outdoor3', 'Outdoor4']
   return (
     <div className="flex flex-col gap-4">
-      <WeddingImagesCarousel
+      <OutdoorImagesCarousel
         visible={outdoorMoreVisible}
         items={items}
         defaultHeading={'Outdoor'}
