@@ -2,7 +2,13 @@ import React, { useState } from 'react'
 import './videos-images-carousel.css'
 import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion'
 
-function VideosImagesCarousel({ visible, items, defaultHeading }) {
+function VideosImagesCarousel({
+  setHappilyIndexCounter,
+  setHappilyVisible,
+  visible,
+  items,
+  defaultHeading,
+}) {
   const parentVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -34,6 +40,10 @@ function VideosImagesCarousel({ visible, items, defaultHeading }) {
                 onMouseEnter={() => {
                   setIsVisible(false)
                   setSelected(item)
+                }}
+                onClick={() => {
+                  setHappilyIndexCounter(index)
+                  setHappilyVisible(true)
                 }}
                 onMouseLeave={() => setIsVisible(true)}
                 whileHover={{
