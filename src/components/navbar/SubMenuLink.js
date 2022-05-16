@@ -43,12 +43,13 @@ function SubMenuLink({ onClick, redirect, text }) {
           >
             {['Chennai', 'Coimabatore', 'Bangalore'].map((item) => {
               return (
-                <motion.span
+                <motion.div
+                  onClick={onClick}
                   className="text-sm text-center"
                   variants={itemVariants()}
                 >
-                  {item}
-                </motion.span>
+                  <Link to={`get-in-touch-${item.toLowerCase()}`}>{item}</Link>
+                </motion.div>
               )
             })}
           </motion.div>

@@ -12,8 +12,7 @@ function HomeTopBar() {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam saepe
           iusto libero nam eos molestias.
         </p>
-        <Link to="/wedding">
-          <button className="start">Start</button>
+        <Link to="/wedding" className="start">Start
         </Link>
         <a href="" className="mt-3">
           <span className="text-md discover-more">Discover More</span>

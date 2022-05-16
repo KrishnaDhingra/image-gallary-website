@@ -47,7 +47,7 @@ function HomePhotoSample() {
             mollitia, molestiae quas vel sint commodi repudiandae consequuntur
             voluptatum laborum numquam blanditiis
           </p>
-          <h3 className="discover font-semibold text-[20px]">Discover +</h3>
+          <a className="discover font-semibold text-[20px]">Discover +</a>
         </div>
         <div className="sample-image-container">
           <img src={SamplePhoto} alt="" />
