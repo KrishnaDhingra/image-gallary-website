@@ -1,23 +1,36 @@
 import React from 'react'
 import './get-in-touch.css'
 import GetInTouchImage from '../../utilities/pricing-big-image2.png'
+import { BsMailbox2 } from 'react-icons/bs'
+import { IoMailOpen } from 'react-icons/io5'
+import { BsFillTelephoneFill } from 'react-icons/bs'
 
 function GetInTouch() {
   return (
     <section className="get-in-touch-container flex flex-col gap-12">
-      <h1 className="get-in-touch-heading text-center">Careers</h1>
+      <h1 className="get-in-touch-heading text-center">Get In Touch</h1>
       <div className="main-content">
         <div>
-          <h1 className="font-semibold mb-4">Wedding Photographer</h1>
+          <h1 className="font-semibold mb-4">One of a kind Photography</h1>
           <p>
-            Are you an experienced wedding photographer looking to move to the
-            next level in the wedding photography industry? We invite you to
-            join our studio to be a part of a larger goal; focus on your
-            photography without the hassles of being an independent
-            professional. Grow, learn and be inspired while working in the
-            company of people who are as passionate about photography as you
-            are; be a part of weddings that inspire you to create stories.
+            We have worls-class, flexible support via live chat, email and hone.
+            We guarantee that you’ll be able to have any issue resolved within
+            24 hours.
           </p>
+          <div className="flex flex-col gap-6 text-md mt-7">
+            <a href="#" className="flex gap-4 items-center">
+              <BsMailbox2 />
+              <span>Banaswadi, Bangalore - 560033</span>
+            </a>
+            <a href="#" className="flex gap-4 items-center">
+              <IoMailOpen />
+              <span>vikas@ooak.photography</span>
+            </a>
+            <a href="#" className="flex gap-4 items-center">
+              <BsFillTelephoneFill />
+              <span>+91 9677362524</span>
+            </a>
+          </div>
         </div>
 
         <img

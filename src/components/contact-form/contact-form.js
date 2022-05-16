@@ -3,7 +3,7 @@ import './contact-form.css'
 
 function ContactForm() {
   return (
-    <section className="contact-container">
+    <section className="rounded-t-3xl contact-container">
       <div className="contact">
         <div className="flex flex-col gap-8">
           <h2 className="font-semibold">Contact Form</h2>
@@ -30,7 +30,7 @@ function ContactForm() {
                 name="event-type"
                 value="HTML"
               />
-              <label for="wedding">Wedding</label>
+              <label htmlFor="wedding">Wedding</label>
             </div>
             <div>
               <input
@@ -39,7 +39,7 @@ function ContactForm() {
                 name="event-type"
                 value="CSS"
               />
-              <label for="reception">Reception</label>
+              <label htmlFor="reception">Reception</label>
             </div>
             <div>
               <input
@@ -48,7 +48,7 @@ function ContactForm() {
                 name="event-type"
                 value="JavaScript"
               />
-              <label for="engagement">Engagement</label>
+              <label htmlFor="engagement">Engagement</label>
             </div>
             <div>
               <input
@@ -57,7 +57,7 @@ function ContactForm() {
                 name="event-type"
                 value="JavaScript"
               />
-              <label for="other">Other</label>
+              <label htmlFor="other">Other</label>
             </div>
           </div>
           <input type="text" placeholder="Location" className="location" />

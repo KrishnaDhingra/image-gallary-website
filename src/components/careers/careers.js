@@ -31,7 +31,7 @@ function Careers() {
           />
         </div>
       </section>
-      <section className="grow-with-us-container">
+      <section className="rounded-t-3xl grow-with-us-container">
         <div className="grow-with-us">
           <div className="flex flex-col gap-8">
             <h2 className="font-semibold">Grow With Us!</h2>

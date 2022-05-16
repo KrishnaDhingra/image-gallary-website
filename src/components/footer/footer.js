@@ -18,23 +18,29 @@ function Footer() {
             while making our clients feel inspired, relaxed, and connected
           </p>
           <div className="flex gap-6">
-            <BsInstagram className="cursor-pointer" />
-            <FiFacebook className="cursor-pointer" />
-            <FiTwitter className="cursor-pointer" />
+            <a href="#">
+              <BsInstagram className="cursor-pointer" />
+            </a>
+            <a href="#">
+              <FiFacebook className="cursor-pointer" />
+            </a>
+            <a href="#">
+              <FiTwitter className="cursor-pointer" />
+            </a>
           </div>
         </div>
         <div>
           <h3>Contacts</h3>
           <div>
-            <a href="">
+            <a href="#">
               <BsMailbox2 />
               <span>Banaswadi, Bangalore - 560033</span>
             </a>
-            <a href="">
+            <a href="#">
               <IoMailOpen />
               <span>vikas@ooak.photography</span>
             </a>
-            <a href="">
+            <a href="#">
               <BsFillTelephoneFill />
               <span>+91 9677362524</span>
             </a>
