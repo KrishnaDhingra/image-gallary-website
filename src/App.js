@@ -29,33 +29,34 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Navbar />
       <AnimatePresence>
         {loading ? (
           <Enter key="enter-animation" />
         ) : (
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/enter" element={<Enter />} />
-            <Route path="/faq" element={<FAQ />} />
-            <Route path="/wedding" element={<Wedding />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/outdoor" element={<Outdoor />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/pricing" element={<Pricing />} />
-            <Route path="/aboutus" element={<AboutUs />} />
-            <Route path="/videos" element={<Videos />} />
-            <Route path="/careers" element={<Careers />} />
-            <Route
-              path="/get-in-touch-chennai"
-              element={<GetInTouchChennai />}
-            />
-          </Routes>
+          <>
+            <Navbar />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/enter" element={<Enter />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/wedding" element={<Wedding />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/gallery" element={<Gallery />} />
+              <Route path="/outdoor" element={<Outdoor />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/pricing" element={<Pricing />} />
+              <Route path="/aboutus" element={<AboutUs />} />
+              <Route path="/videos" element={<Videos />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route
+                path="/get-in-touch-chennai"
+                element={<GetInTouchChennai />}
+              />
+            </Routes>
+            <Footer />
+          </>
         )}
       </AnimatePresence>
-
-      <Footer />
     </BrowserRouter>
   )
 }
