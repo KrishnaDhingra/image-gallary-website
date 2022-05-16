@@ -8,7 +8,7 @@
   gap: 1.3rem;
 }
 .outdoors-image {
-  width: min(170px, 10vw);
+  width: 180px;
   height: 100%;
   position: relative;
   background-image: url('https://images.pexels.com/photos/235986/pexels-photo-235986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
@@ -32,10 +32,10 @@
 }
 
 .outdoors-image:nth-child(even) {
-  transform: translateY(-30px);
+  transform: translateY(-20px);
 }
 .outdoors-image:nth-child(odd) {
-  transform: translateY(30px);
+  transform: translateY(20px);
 }
 .outdoor-heading {
   font-size: 2.3rem;

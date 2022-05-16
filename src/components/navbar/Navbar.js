@@ -78,7 +78,7 @@ function Navbar() {
           )}
         </AnimatePresence>
 
-        <section className="px-[1rem] sm:px-[2rem] lg:px-[3rem]">
+        <section className="px-[1rem] mt-[-1.4rem] sm:mt-[0rem] sm:px-[2rem] lg:px-[3rem]">
           <div className="flex relative">
             <FaRegBell
               className="bell text-2xl cursor-pointer"
