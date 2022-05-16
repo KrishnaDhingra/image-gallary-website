@@ -2,13 +2,13 @@
   width: max-content;
   max-width: min(1300px, 90%);
   margin-top: 4rem;
-  height: 400px;
+  height: min(400px, 50vh);
   display: flex;
   margin-inline: auto;
   gap: 1.3rem;
 }
 .outdoors-image {
-  width: 180px;
+  width: min(170px, 10vw);
   height: 100%;
   position: relative;
   background-image: url('https://images.pexels.com/photos/235986/pexels-photo-235986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');

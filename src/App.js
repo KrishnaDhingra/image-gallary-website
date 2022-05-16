@@ -45,7 +45,7 @@ function App() {
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/aboutus" element={<AboutUs />} />
             <Route path="/videos" element={<Videos />} />
-            <Route path="/jobs" element={<Careers />} />
+            <Route path="/careers" element={<Careers />} />
           </Routes>
         )}
       </AnimatePresence>
