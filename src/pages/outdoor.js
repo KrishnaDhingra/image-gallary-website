@@ -6,7 +6,24 @@ import WeddingFooter from '../components/wedding-footer/wedding-footer'
 function Outdoor() {
   const [outdoorMoreVisible, setOutdoorMoreVisible] = useState(false)
 
-  const items = ['Outdoor1', 'Outdoor2', 'Outdoor3', 'Outdoor4']
+  const items = [
+    {
+      image: 'https://swiperjs.com/demos/images/nature-1.jpg',
+      text: 'Outdoor1',
+    },
+    {
+      image: 'https://swiperjs.com/demos/images/nature-2.jpg',
+      text: 'Outdoor2',
+    },
+    {
+      image: 'https://swiperjs.com/demos/images/nature-3.jpg',
+      text: 'Outdoor3',
+    },
+    {
+      image: 'https://swiperjs.com/demos/images/nature-4.jpg',
+      text: 'Outdoor4',
+    },
+  ]
   return (
     <div className="flex flex-col gap-4">
       <OutdoorImagesCarousel

@@ -8,17 +8,35 @@ function Videos() {
   const [happilyVisible, setHappilyVisible] = useState(false)
   const [happilyMoreVisible, setHappilyMoreVisible] = useState(false)
 
-  const items = ['Videos1', 'Videos2', 'Videos3']
+  // fetch all the videos from firebase here
+  const items = [
+    {
+      image: 'https://swiperjs.com/demos/images/nature-1.jpg',
+      text: 'Videos1',
+    },
+    {
+      image: 'https://swiperjs.com/demos/images/nature-2.jpg',
+      text: 'Videos2',
+    },
+    {
+      image: 'https://swiperjs.com/demos/images/nature-3.jpg',
+      text: 'Videos3',
+    },
+    {
+      image: 'https://swiperjs.com/demos/images/nature-4.jpg',
+      text: 'Videos4',
+    },
+  ]
   return (
     <div className="flex flex-col gap-4">
       {happilyVisible ? (
-        <HappilyEverAfter index={happilyIndexCounter} />
+        <HappilyEverAfter items={items} index={happilyIndexCounter} />
       ) : (
+        // pass all the videos here that have been fethced from firebase and also pass props that will help select the index of the video that have been selected
         <VideosImagesCarousel
           setHappilyIndexCounter={setHappilyIndexCounter}
           setHappilyVisible={setHappilyVisible}
           visible={happilyMoreVisible}
-          index={happilyIndexCounter}
           items={items}
           defaultHeading={'Videos'}
         />

@@ -6,14 +6,10 @@ import { IoIosArrowBack } from 'react-icons/io'
 import { IoIosArrowForward } from 'react-icons/io'
 import { motion } from 'framer-motion'
 
-function HappilyEverAfter({ index }) {
+function HappilyEverAfter({ items, index }) {
   const [indexCounter, setIndexCounter] = useState(index)
 
-  const items = [
-    HappilyEverAfterImage,
-    HappilyEverAfterImage2,
-    HappilyEverAfterImage,
-  ]
+  // fetch all the videos from firebase or other option is to receive videos as props from videos page component and then use the index that have been selected by the videos images carousel to render the desired image
 
   const next = () => {
     if (indexCounter !== items.length - 1) {
@@ -34,7 +30,7 @@ function HappilyEverAfter({ index }) {
       <section className="mx-auto max-w-[1300px] w-[95%] flex justify-between items-center">
         <IoIosArrowBack onClick={previous} className="text-[2rem]" />
         <img
-          src={items[indexCounter]}
+          src={items[indexCounter].image}
           className="happily-ever-after-image"
           alt="Happily Ever After Image"
         />

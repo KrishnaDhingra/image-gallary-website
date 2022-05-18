@@ -6,7 +6,24 @@ import WeddingFooter from '../components/wedding-footer/wedding-footer'
 function Gallery() {
   const [galleryMoreVisible, setGalleryMoreVisible] = useState(false)
 
-  const items = ['Gallery1', 'Gallery2', 'Gallery3', 'Gallery4']
+  const items = [
+    {
+      image: 'https://swiperjs.com/demos/images/nature-1.jpg',
+      text: 'Gallery1',
+    },
+    {
+      image: 'https://swiperjs.com/demos/images/nature-2.jpg',
+      text: 'Gallery2',
+    },
+    {
+      image: 'https://swiperjs.com/demos/images/nature-3.jpg',
+      text: 'Gallery3',
+    },
+    {
+      image: 'https://swiperjs.com/demos/images/nature-4.jpg',
+      text: 'Gallery4',
+    },
+  ]
   return (
     <div className="flex flex-col gap-4">
       <WeddingImagesCarousel

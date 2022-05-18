@@ -50,24 +50,18 @@ function VideosImagesCarousel({
           modules={[EffectCoverflow, Pagination]}
           className="mySwiper"
         >
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-          </SwiperSlide>
+          {items.map((item, index) => {
+            return (
+              <SwiperSlide
+                onClick={() => {
+                  setHappilyIndexCounter(index)
+                  setHappilyVisible(true)
+                }}
+              >
+                <img src={item.image} />
+              </SwiperSlide>
+            )
+          })}
         </Swiper>
       </div>
       <div
@@ -88,7 +82,7 @@ function VideosImagesCarousel({
                 key={index}
                 onMouseEnter={() => {
                   setIsVisible(false)
-                  setSelected(item)
+                  setSelected(item.text)
                 }}
                 onClick={() => {
                   setHappilyIndexCounter(index)
@@ -100,6 +94,9 @@ function VideosImagesCarousel({
                   transition: { duration: 0.4 },
                 }}
                 className="videos-image"
+                style={{
+                  backgroundImage: `url(${item.image})`,
+                }}
               ></motion.div>
             )
           })}
