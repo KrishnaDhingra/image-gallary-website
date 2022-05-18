@@ -6,14 +6,16 @@ import './blog.css'
 
 function Blog() {
   return (
-    <main className="blog-container">
-      <div className="circle circle1"></div>
-      <div className="circle circle2"></div>
-      <h1 className="trending-heading font-semibold text-[60px]">Trending</h1>
+    <main className="blog-container my-[2rem] md:my-[5rem] px-8 md:px-0">
+      <div className="hidden lg:block circle circle1"></div>
+      <div className="hidden lg:block circle circle2"></div>
+      <h1 className="trending-heading font-semibold text-[48px] md:text-[60px]">
+        Trending
+      </h1>
       <article className="trending-container">
         <div>
           <img
-            className="w-[279px] h-[180px] rounded-[15px]"
+            className="trending-image object-cover max-w-[279px] w-full aspect-video rounded-[15px]"
             src={TrendingImage}
             alt=""
           />
@@ -25,7 +27,11 @@ function Blog() {
           return (
             <article>
               <div className="mb-6">
-                <img className="w-full rounded-[15px]" src={BlogImage} alt="" />
+                <img
+                  className="w-full aspect-video object-cover rounded-[15px]"
+                  src={BlogImage}
+                  alt=""
+                />
               </div>
               <BlogInfo />
             </article>
@@ -38,8 +44,12 @@ function Blog() {
 function TrendingInfo() {
   return (
     <section className="trending-info">
-      <h3 className="text-[20px] font-semibold">Category Name</h3>
-      <h1 className="font-semibold">Lorem Ispum Dolor Sit</h1>
+      <h3 className="text-[14px] sm:text-[20px] font-semibold">
+        Category Name
+      </h3>
+      <h1 className="text-[20px] sm:text-[48px] font-semibold">
+        Lorem Ispum Dolor Sit
+      </h1>
       <div className="mt-3 bottom-container flex gap-4">
         <div className="bottom-container-circle"></div>
         <div className="bottom-right-container">

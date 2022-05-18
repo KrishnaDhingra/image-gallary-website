@@ -4,7 +4,6 @@
 }
 
 .blog-container {
-  margin-block: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,7 +16,6 @@
   gap: 2rem;
 }
 .trending-info h1 {
-  font-size: 48px;
   line-height: 1;
   margin-top: 0.35rem;
   margin-bottom: 1.3rem;
@@ -38,4 +36,13 @@
   width: min(1100px, 100%);
   gap: 4.9rem;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+}
+@media only screen and (max-width: 900px) {
+  .trending-container {
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+  .trending-image {
+    max-width: 500px;
+  }
 }

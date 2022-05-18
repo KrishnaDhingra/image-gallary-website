@@ -24,7 +24,7 @@ function Pricing() {
 
   return (
     <motion.main
-      className="pricing-container"
+      className="pricing-container my-[2rem] md:my-[4rem]"
       variants={parentVariants}
       initial="hidden"
       animate="visible"
@@ -41,7 +41,10 @@ function Pricing() {
         animate="visible"
         className="hidden lg:block circle circle2"
       ></motion.div>
-      <motion.h1 variants={childrenVariants} className="pricing-heading">
+      <motion.h1
+        variants={childrenVariants}
+        className="pricing-heading text-[48px] md:text-[60px]"
+      >
         Pricing
       </motion.h1>
       <motion.p variants={childrenVariants} className="text-center mx-3">

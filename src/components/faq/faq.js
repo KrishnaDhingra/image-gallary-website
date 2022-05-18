@@ -39,9 +39,14 @@ function FAQ() {
         variants={parentVariants}
         initial="hidden"
         animate="visible"
-        className="faq-container"
+        className="faq-container my-[2rem] md:my-[5rem]"
       >
-        <motion.h1 variants={childrenVariants}>FAQ</motion.h1>
+        <motion.h1
+          className="text-[48px] md:text-[60px]"
+          variants={childrenVariants}
+        >
+          FAQ
+        </motion.h1>
         <motion.p
           variants={childrenVariants}
           className="text-center px-2 sm:px-0 "
