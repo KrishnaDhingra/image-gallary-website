@@ -13,7 +13,7 @@ function AboutUs() {
           'Vikas’s journey as a Photographer began as a casual fling in 2009, but soon evolved into a full-blown passion for the art. He’s a perfect mix of geek and creative, coming up with novel ideas for the shoot and solving the technological equation of how to make the idea work. OOAK is his brain child, born out of his love for photography and determination to redefine “Wedding Photography” in India.'
         }
       />
-      <p className="w-[95%] max-w-[1150px] mx-auto mt-[6.5rem] leading-[30px]">
+      <p className="w-[95%] max-w-[1150px] mx-auto mt-[6.5rem] leading-[30px] px-8 md:px-0">
         Born in late 2014, One of a kind is a wedding photography and candid
         wedding photography business franchise that is the brainchild of Vikas
         Alagarsamy and Navya, coupled with a mutual love for wedding photography

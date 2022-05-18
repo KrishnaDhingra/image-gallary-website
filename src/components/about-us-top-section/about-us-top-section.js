@@ -6,7 +6,7 @@ function AboutUsTopSection() {
   return (
     <section className="about-us-top-section-container flex flex-col gap-12">
       <h1 className="about-us-heading text-center">About Us</h1>
-      <div className="main-content">
+      <div className="main-content px-8 md:px-0">
         <p>
           Together with our photographers and video makers, we deliver photo-
           and video services for you We have a beautiful and spacious photo

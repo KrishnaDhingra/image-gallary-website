@@ -10,7 +10,6 @@
   display: grid;
   grid-template-columns: 1fr 1.7fr;
   position: relative;
-  gap: 10rem;
 }
 .contact-form {
   display: grid;
@@ -54,4 +53,19 @@
 .radio-button {
   border: 2px solid black;
   background-color: white;
+}
+@media only screen and (max-width: 900px) {
+  .contact {
+    grid-template-columns: 1fr;
+    padding-inline: 2rem;
+  }
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+  .contact-heading {
+    text-align: center;
+  }
+  .contact-summary {
+    display: none;
+  }
 }

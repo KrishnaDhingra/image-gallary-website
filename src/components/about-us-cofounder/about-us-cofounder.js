@@ -7,10 +7,12 @@ import { FiTwitter } from 'react-icons/fi'
 
 function AboutUsCoFounder({ heading, text }) {
   return (
-    <section className="aboutus-cofounder-container">
+    <section className="aboutus-cofounder-container rounded-3xl md:rounded-t-3xl">
       <div className="inner-container flex flex-col gap-[3rem]">
-        <h1 className="text-[36px] font-semibold">{heading}</h1>
-        <div className="inner-container-content">
+        <h1 className="text-[24px] text-center md:text-left md:text-[36px] font-semibold">
+          {heading}
+        </h1>
+        <div className="inner-container-content px-8 md:px-0">
           <div className="flex flex-col gap-8 items-center">
             <div className="bg-white h-[170px] w-[170px] rounded-full overflow-hidden">
               <img

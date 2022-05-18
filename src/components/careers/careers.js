@@ -10,9 +10,11 @@ function Careers() {
     <main className="flex flex-col">
       <section className="jobs-top-section-container flex flex-col gap-12">
         <h1 className="jobs-heading text-center">Careers</h1>
-        <div className="main-content">
+        <div className="main-content px-8 md:px-0">
           <div>
-            <h1 className="font-semibold mb-4">Wedding Photographer</h1>
+            <h1 className="wedding-photographer-heading font-semibold mb-4">
+              Wedding Photographer
+            </h1>
             <p>
               Are you an experienced wedding photographer looking to move to the
               next level in the wedding photography industry? We invite you to
@@ -32,14 +34,14 @@ function Careers() {
         </div>
       </section>
       <section className="rounded-t-3xl grow-with-us-container">
-        <div className="grow-with-us">
+        <div className="grow-with-us px-8 md:px-0">
           <div className="flex flex-col gap-8">
             <h2 className="font-semibold">Grow With Us!</h2>
-            <p>
+            <p className="hidden sm:block">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
               mollitia, molestiae
             </p>
-            <div className="flex gap-7">
+            <div className="hidden social-icons-container sm:flex gap-7">
               <BsInstagram className="cursor-pointer" />
               <FiFacebook className="cursor-pointer" />
               <FiTwitter className="cursor-pointer" />

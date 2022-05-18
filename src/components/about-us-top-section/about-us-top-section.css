@@ -14,3 +14,9 @@
   grid-template-columns: 1fr 1fr;
   gap: 5rem;
 }
+@media only screen and (max-width: 900px) {
+  .about-us-top-section-container .main-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}

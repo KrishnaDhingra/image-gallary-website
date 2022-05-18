@@ -9,15 +9,17 @@ function GetInTouch() {
   return (
     <section className="get-in-touch-container flex flex-col gap-12">
       <h1 className="get-in-touch-heading text-center">Get In Touch</h1>
-      <div className="main-content">
+      <div className="main-content px-8 md:px-0">
         <div>
-          <h1 className="font-semibold mb-4">One of a kind Photography</h1>
+          <h1 className="one-of-a-kind-heading font-semibold mb-4">
+            One of a kind Photography
+          </h1>
           <p>
             We have worls-class, flexible support via live chat, email and hone.
             We guarantee that you’ll be able to have any issue resolved within
             24 hours.
           </p>
-          <div className="flex flex-col gap-6 text-md mt-7">
+          <div className="social-info-container flex flex-col gap-6 text-md mt-7">
             <a href="#" className="flex gap-4 items-center">
               <BsMailbox2 />
               <span>Banaswadi, Bangalore - 560033</span>
