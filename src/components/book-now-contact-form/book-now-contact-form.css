@@ -89,7 +89,7 @@
   .book-now-contact-form {
     grid-template-columns: 1fr;
   }
-  .contact-heading {
+  .book-now-contact-form ni .contact-heading {
     text-align: center;
   }
   .contact-summary {

@@ -41,21 +41,21 @@
   font-weight: 600;
 }
 
-.swiper {
+.mySwiper {
   display: flex;
   justify-content: center;
   width: 100% !important;
   padding-block: 3rem !important;
 }
 
-.swiper-slide {
+.mySwiper .swiper-slide {
   position: relative;
   background-position: center !important;
   background-size: cover !important;
   width: 180px !important;
   height: 50vh !important;
 }
-.swiper-slide::before {
+.mySwiper .swiper-slide::before {
   content: '';
   position: absolute;
   width: 100%;
@@ -63,10 +63,10 @@
   background-color: rgba(204, 204, 204, 0.4);
   transition: all 0.3s;
 }
-.swiper-slide-active::before {
+.mySwiper .swiper-slide-active::before {
   opacity: 0;
 }
-.swiper-slide img {
+.mySwiper .swiper-slide img {
   display: block;
   height: 100%;
   object-fit: cover;

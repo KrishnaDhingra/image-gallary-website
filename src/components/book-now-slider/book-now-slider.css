@@ -1,0 +1,22 @@
+.book-now-swiper {
+  display: flex;
+  justify-content: center;
+  width: min(1250px, 95%);
+  margin-inline: auto;
+  margin-block: 7rem;
+  margin-inline: auto;
+}
+
+.book-now-swiper-slide {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  width: 230px;
+}
+.book-now-swiper-slide img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.3rem;
+  aspect-ratio: 16 / 13;
+}
