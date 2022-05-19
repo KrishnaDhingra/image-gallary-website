@@ -23,14 +23,13 @@ function SubMenuLink({ onClick, redirect, text }) {
   }
   return (
     <div className="flex flex-col relative">
-      <motion.li className="flex gap-4" variants={itemVariants()}>
-        <Link onClick={onClick} to={redirect}>
-          <span>{text}</span>
-        </Link>
-        <IoIosArrowBack
-          onClick={() => setSubMenuVisible(!subMenuVisible)}
-          className="hover:text-gray-400 text-white -rotate-90"
-        />
+      <motion.li
+        onClick={() => setSubMenuVisible(!subMenuVisible)}
+        className="flex gap-4"
+        variants={itemVariants()}
+      >
+          <span className="text-white">{text}</span>
+        <IoIosArrowBack className="hover:text-gray-400 text-white -rotate-90" />
       </motion.li>
       <AnimatePresence>
         {subMenuVisible && (

@@ -1,0 +1,22 @@
+.book-now-top-section-container {
+  margin-inline: auto;
+  width: min(1150px, 95%);
+  margin-top: 5rem;
+}
+.book-now-heading {
+  font-weight: 600;
+  font-size: 48px;
+  margin: 0 0;
+}
+.book-now-top-section-container .main-content {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+}
+@media only screen and (max-width: 900px) {
+  .book-now-top-section-container .main-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}

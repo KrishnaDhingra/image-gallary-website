@@ -1,0 +1,109 @@
+.book-now-contact-container {
+  color: white;
+  padding: 5rem 0rem;
+  background-color: var(--main-bg-color);
+  margin-top: 8rem;
+}
+.book-now-contact {
+  margin-inline: auto;
+  width: min(1150px, 95%);
+  display: grid;
+  grid-template-columns: 1fr 1.7fr;
+  position: relative;
+}
+.book-now-contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 2.5rem;
+  column-gap: 4rem;
+}
+.book-now-contact-form input {
+  color: white;
+  background-color: transparent;
+  border-bottom: 1.5px solid white;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.8rem;
+}
+.book-now-contact-form input:focus {
+  outline: none;
+  border-bottom: 1.5px solid rgb(184, 184, 184);
+}
+.book-now-contact-form input::placeholder {
+  color: white;
+  font-size: 0.8rem;
+}
+.book-now-contact-form .email,
+.book-now-contact-form .radio-group {
+  grid-column: 1 / -1;
+}
+.book-now-contact-form button {
+  background-color: white;
+  color: var(--main-bg-color);
+  padding: 0.8rem 0rem;
+  border-radius: 0.5rem;
+  grid-column: 1 / -1;
+}
+.book-now-contact label {
+  font-size: 14px;
+  margin-left: 8px;
+}
+.kind-of-event-form {
+  width: 100%;
+  grid-column: 1 / -1;
+  background-color: #b98c7c;
+  padding: 2rem 3rem;
+  border-radius: 0.8rem;
+}
+.kind-of-event-form form {
+  display: grid;
+  column-gap: 5rem;
+  row-gap: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+}
+.kind-of-event-form form .select-input-container,
+.kind-of-event-form form .crowd-strength-container {
+  grid-column: 1 / -1;
+}
+.kind-of-event-form form input {
+  border: none;
+  background-color: white;
+  color: var(--main-bg-color);
+  border-radius: 0.4rem;
+}
+.kind-of-event-form form input::placeholder {
+  color: var(--main-bg-color);
+}
+.kind-of-event-form form .add-event-button {
+  max-width: max-content;
+  font-weight: 500;
+  padding: 0.7rem 2rem;
+  font-size: 0.8rem;
+  grid-column: 1 / -1;
+  margin-left: auto;
+}
+@media only screen and (max-width: 900px) {
+  .book-now-contact {
+    grid-template-columns: 1fr;
+    padding-inline: 1rem;
+  }
+  .book-now-contact-form {
+    grid-template-columns: 1fr;
+  }
+  .contact-heading {
+    text-align: center;
+  }
+  .contact-summary {
+    display: none;
+  }
+}
+@media only screen and (max-width: 660px) {
+  .kind-of-event-form {
+    padding: 2rem 1.5rem;
+  }
+  .kind-of-event-form form {
+    display: grid;
+    column-gap: 5rem;
+    row-gap: 1.5rem;
+    grid-template-columns: 1fr;
+  }
+}

@@ -28,7 +28,7 @@ function ContactForm() {
                 className="radio-button"
                 id="wedding"
                 name="event-type"
-                value="HTML"
+                value="wedding"
               />
               <label htmlFor="wedding">Wedding</label>
             </div>
@@ -37,7 +37,7 @@ function ContactForm() {
                 type="radio"
                 id="reception"
                 name="event-type"
-                value="CSS"
+                value="reception"
               />
               <label htmlFor="reception">Reception</label>
             </div>
@@ -46,17 +46,12 @@ function ContactForm() {
                 type="radio"
                 id="engagement"
                 name="event-type"
-                value="JavaScript"
+                value="engagement"
               />
               <label htmlFor="engagement">Engagement</label>
             </div>
             <div>
-              <input
-                type="radio"
-                id="other"
-                name="event-type"
-                value="JavaScript"
-              />
+              <input type="radio" id="other" name="event-type" value="other" />
               <label htmlFor="other">Other</label>
             </div>
           </div>

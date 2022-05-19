@@ -58,7 +58,7 @@ function Footer() {
               'Contact Us',
             ].map((element) => {
               return (
-                <a className="cursor-pointer" key={element} href="">
+                <a className="cursor-pointer" key={element} href="#">
                   {element}
                 </a>
               )
@@ -81,7 +81,7 @@ function Footer() {
             'Special Occassion',
           ].map((element) => {
             return (
-              <a className="cursor-pointer" key={element}>
+              <a className="cursor-pointer" key={element} herf="#">
                 {element}
               </a>
             )

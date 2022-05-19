@@ -45,7 +45,7 @@ function WeddingImagesCarousel({ visible, items, defaultHeading }) {
           modules={[EffectCoverflow, Pagination]}
           className="mySwiper"
         >
-          {items.map((item, index) => {
+          {items.map((item) => {
             return (
               <SwiperSlide>
                 <img src={item.image} />
@@ -54,7 +54,10 @@ function WeddingImagesCarousel({ visible, items, defaultHeading }) {
           })}
         </Swiper>
       </div>
-      <div key={visible} className="flex flex-col items-center gap-24">
+      <div
+        key={visible}
+        className="hidden md:flex flex-col items-center gap-24"
+      >
         <motion.section
           layout
           variants={parentVariants}

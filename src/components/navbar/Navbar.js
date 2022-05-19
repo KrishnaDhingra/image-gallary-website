@@ -55,7 +55,7 @@ function Navbar() {
                   <NavbarLink
                     onClick={toggleNavbarVisibility}
                     text={'Book Now'}
-                    redirect={'/'}
+                    redirect={'/book-now'}
                   />
                   <NavbarLink
                     onClick={toggleNavbarVisibility}

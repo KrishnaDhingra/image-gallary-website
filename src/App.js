@@ -3,7 +3,6 @@ import './App.css'
 import { AnimatePresence } from 'framer-motion'
 import Enter from './components/enter/Enter'
 import Navbar from './components/navbar/Navbar'
-import WhatHappeningSidePopup from './components/what-happening-sidepopup/what-happening-sidepopup'
 import Home from './pages/home'
 import FAQ from './components/faq/faq'
 import Wedding from './pages/wedding'
@@ -17,6 +16,7 @@ import AboutUs from './pages/aboutUs'
 import Videos from './pages/videos'
 import Careers from './components/careers/careers'
 import GetInTouchChennai from './pages/get-in-touch-chennai'
+import BookNow from './pages/book-now'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 function App() {
   const [loading, setLoading] = useState(true)
@@ -48,6 +48,7 @@ function App() {
               <Route path="/aboutus" element={<AboutUs />} />
               <Route path="/videos" element={<Videos />} />
               <Route path="/careers" element={<Careers />} />
+              <Route path="/book-now" element={<BookNow />} />
               <Route
                 path="/get-in-touch-chennai"
                 element={<GetInTouchChennai />}
