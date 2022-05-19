@@ -1,0 +1,32 @@
+:root {
+  --main-bg-color: #a67665;
+}
+.book-now-founders-note-container {
+  margin-top: 7rem;
+  background-color: var(--main-bg-color);
+  padding: 5rem 0rem;
+  color: white;
+}
+.book-now-founders-note-container .inner-container {
+  margin-inline: auto;
+  width: min(1150px, 95%);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  place-items: center;
+  gap: 5rem;
+}
+.founders-note-heading::before {
+  content: '';
+  position: absolute;
+  width: 40%;
+  border: 1px solid white;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+}
+@media only screen and (max-width: 768px) {
+  .book-now-founders-note-container .inner-container {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}
