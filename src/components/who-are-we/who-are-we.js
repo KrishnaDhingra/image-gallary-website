@@ -18,9 +18,9 @@ function WhoAreWe() {
       </article>
 
       <div className="who-are-we-side-articles-container">
-        {data.map((item) => {
+        {data.map((item, index) => {
           return (
-            <article className="flex flex-col gap-3">
+            <article className="flex flex-col gap-3" key={index}>
               <img className="self-start" src={item.image} alt="" />
               <h3 className="font-semibold">{item.subheading}</h3>
               <p>{item.text}</p>

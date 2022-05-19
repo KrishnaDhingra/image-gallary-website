@@ -56,9 +56,13 @@ function FAQ() {
 
         <div className="faq-inner">
           <motion.ul variants={childrenVariants} layout>
-            {data.map((element) => {
+            {data.map((element, index) => {
               return (
-                <Item question={element.question} answer={element.answer} />
+                <Item
+                  key={`question-${index}`}
+                  question={element.question}
+                  answer={element.answer}
+                />
               )
             })}
           </motion.ul>

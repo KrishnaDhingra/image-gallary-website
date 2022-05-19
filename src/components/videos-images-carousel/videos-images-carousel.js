@@ -53,6 +53,7 @@ function VideosImagesCarousel({
           {items.map((item, index) => {
             return (
               <SwiperSlide
+                key={index}
                 onClick={() => {
                   setHappilyIndexCounter(index)
                   setHappilyVisible(true)

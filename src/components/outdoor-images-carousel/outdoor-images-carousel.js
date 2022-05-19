@@ -44,9 +44,9 @@ function OutdoorImagesCarousel({ visible, items, defaultHeading }) {
           modules={[EffectCoverflow, Pagination]}
           className="mySwiper"
         >
-          {items.map((item) => {
+          {items.map((item, index) => {
             return (
-              <SwiperSlide>
+              <SwiperSlide key={index}>
                 <img src={item.image} />
               </SwiperSlide>
             )

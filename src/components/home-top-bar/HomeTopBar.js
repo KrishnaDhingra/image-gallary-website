@@ -13,7 +13,7 @@ function HomeTopBar() {
           iusto libero nam eos molestias.
         </p>
         <Link to="/wedding" className="start">
-          Start
+          <span>Start</span>
         </Link>
         <a href="#" className="mt-3">
           <span className="text-md discover-more">Discover More</span>

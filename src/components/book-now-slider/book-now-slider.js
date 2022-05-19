@@ -37,10 +37,10 @@ function BookNowSlider() {
       modules={[Pagination]}
       className="book-now-swiper"
     >
-      {items.map((item) => {
+      {items.map((item, index) => {
         return (
           <SwiperSlide className="book-now-swiper-slide">
-            <img src={item} />
+            <img src={item} alt={`Slider Image ${index}`} />
           </SwiperSlide>
         )
       })}

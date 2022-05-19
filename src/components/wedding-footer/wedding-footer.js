@@ -17,7 +17,7 @@ function WeddingFooter({ setMoreVisible }) {
       ) : (
         <Link to="/services">Services</Link>
       )}
-      <a onClick={() => setMoreVisible(true)}>Discover More +</a>
+      <p onClick={() => setMoreVisible(true)}>Discover More +</p>
       {relative_path === '/wedding' ||
       relative_path === '/services' ||
       relative_path === '/gallery' ? (

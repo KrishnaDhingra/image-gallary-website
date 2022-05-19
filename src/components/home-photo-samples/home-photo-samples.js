@@ -5,9 +5,9 @@ import SamplePhoto from '../../utilities/sample-photo.png'
 function HomePhotoSamplesContainer() {
   return (
     <section className="main-samples-container">
-      {[1, 2, 3, 4].map((item) => {
+      {[1, 2, 3, 4].map((item, index) => {
         return (
-          <div className="samples-inner">
+          <div className="samples-inner" key={index}>
             <div className="background"></div>
             <div className="content-container px-8 md:px-12 md:gap-[3.5rem] xl:gap-0 xl:px-[4.5rem]">
               <div className="flex flex-col gap-4">
