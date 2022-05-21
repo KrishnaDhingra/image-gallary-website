@@ -72,6 +72,31 @@ function Navbar() {
                     text={'Pricing'}
                     redirect={'/pricing'}
                   />
+                  <NavbarLink
+                    onClick={toggleNavbarVisibility}
+                    text={'Wedding'}
+                    redirect={'/wedding'}
+                  />
+                  <NavbarLink
+                    onClick={toggleNavbarVisibility}
+                    text={'Services'}
+                    redirect={'/services'}
+                  />
+                  <NavbarLink
+                    onClick={toggleNavbarVisibility}
+                    text={'Outdoor'}
+                    redirect={'/outdoor'}
+                  />
+                  <NavbarLink
+                    onClick={toggleNavbarVisibility}
+                    text={'Gallery'}
+                    redirect={'/gallery'}
+                  />
+                  <NavbarLink
+                    onClick={toggleNavbarVisibility}
+                    text={'Videos'}
+                    redirect={'/videos'}
+                  />
                 </section>
               </motion.ul>
             </Backdrop>

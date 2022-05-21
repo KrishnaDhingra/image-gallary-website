@@ -16,6 +16,8 @@ import AboutUs from './pages/aboutUs'
 import Videos from './pages/videos'
 import Careers from './components/careers/careers'
 import GetInTouchChennai from './pages/get-in-touch-chennai'
+import GetInTouchBangalore from './pages/get-in-touch-bangalore'
+import GetInTouchCoimbatore from './pages/get-in-touch-coimbatore'
 import BookNow from './pages/book-now'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 function App() {
@@ -52,6 +54,14 @@ function App() {
               <Route
                 path="/get-in-touch-chennai"
                 element={<GetInTouchChennai />}
+              />
+              <Route
+                path="/get-in-touch-bangalore"
+                element={<GetInTouchBangalore />}
+              />
+              <Route
+                path="/get-in-touch-coimbatore"
+                element={<GetInTouchCoimbatore />}
               />
             </Routes>
             <Footer />

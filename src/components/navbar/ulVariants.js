@@ -5,7 +5,7 @@ export const ulVariants = {
     transition: {
       ease: [0.6, 0, 0.1, 1],
       duration: 0.5,
-      staggerChildren: 0.09,
+      staggerChildren: 0.05,
     },
   },
   exit: {

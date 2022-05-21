@@ -28,7 +28,7 @@ function SubMenuLink({ onClick, redirect, text }) {
         className="flex gap-4"
         variants={itemVariants()}
       >
-          <span className="text-white">{text}</span>
+        <span className="text-white">{text}</span>
         <IoIosArrowBack className="hover:text-gray-400 text-white -rotate-90" />
       </motion.li>
       <AnimatePresence>
@@ -38,13 +38,13 @@ function SubMenuLink({ onClick, redirect, text }) {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="relative sm:absolute top-[123%] sm:left-[-10%] text-white flex flex-col my-3 sm:my-0 sm:flex-row gap-3"
+            className="relative sm:absolute top-[130%] sm:left-[-20%] text-white flex flex-col my-3 sm:my-0 sm:flex-row gap-3"
           >
-            {['Chennai', 'Coimabatore', 'Bangalore'].map((item) => {
+            {['Chennai', 'Coimbatore', 'Bangalore'].map((item) => {
               return (
                 <motion.div
                   onClick={onClick}
-                  className="text-sm text-center"
+                  className="text-xs text-center"
                   variants={itemVariants()}
                 >
                   <Link to={`get-in-touch-${item.toLowerCase()}`}>{item}</Link>
