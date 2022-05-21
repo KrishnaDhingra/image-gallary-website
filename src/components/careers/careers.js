@@ -1,5 +1,6 @@
 import React from 'react'
 import CareersTopSectionImage from '../../utilities/careers-top-section.png'
+import BookNowSlider from '../book-now-slider/book-now-slider'
 import { BsInstagram } from 'react-icons/bs'
 import { FiFacebook } from 'react-icons/fi'
 import { FiTwitter } from 'react-icons/fi'
@@ -62,6 +63,7 @@ function Careers() {
           </form>
         </div>
       </section>
+      <BookNowSlider />
     </main>
   )
 }

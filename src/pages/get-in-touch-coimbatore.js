@@ -35,8 +35,8 @@ function GetInTouchCoimbatore() {
     <main className="flex flex-col">
       <GetInTouch />
       <ContactForm />
-      <h1 className="ml-28 my-[6rem] text-[36px] font-semibold">
-        Wedding photographers in Coimbatore
+      <h1 className="text-center md:text-left md:ml-28 my-[6rem] text-[24px] md:text-[36px] font-semibold">
+        Wedding photographers in Bangalore
       </h1>
       <WeddingImagesCarousel items={items} defaultHeading={'Wedding'} />
       {/* <GetInTouchMap /> */}

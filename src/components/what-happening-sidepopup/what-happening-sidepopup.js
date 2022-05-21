@@ -123,7 +123,11 @@ const Article = () => {
 
   return (
     <motion.article variants={item} className="flex flex-col gap-4">
-      <img src={SideBarImage} alt="" />
+      <img
+        className="w-full aspect-video object-cover"
+        src={SideBarImage}
+        alt=""
+      />
       <h3 className="font-bold">Header 1 - Lorem Ispum</h3>
       <p className="text-sm">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium

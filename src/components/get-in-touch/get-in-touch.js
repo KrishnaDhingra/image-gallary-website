@@ -11,7 +11,7 @@ function GetInTouch() {
       <h1 className="get-in-touch-heading text-center">Get In Touch</h1>
       <div className="main-content px-8 md:px-0">
         <div>
-          <h1 className="one-of-a-kind-heading font-semibold mb-4">
+          <h1 className="text-[24px] md:text[36px] one-of-a-kind-heading font-semibold mb-4">
             One of a kind Photography
           </h1>
           <p>
