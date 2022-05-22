@@ -13,7 +13,7 @@
 @media only screen and (max-width: 640px) {
   .discover-more-text {
     left: 50%;
-    top: -40px;
+    top: -34px;
     transform: translateX(-50%);
   }
 }

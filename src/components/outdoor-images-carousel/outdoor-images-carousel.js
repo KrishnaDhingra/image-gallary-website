@@ -34,6 +34,10 @@ function OutdoorImagesCarousel({ visible, items, defaultHeading }) {
           centeredSlidesBounds={true}
           slidesPerView={'auto'}
           spaceBetween={25}
+          onSlideChange={({ activeIndex }) => {
+            setIsVisible(false)
+            setSelected(items[activeIndex].text)
+          }}
           coverflowEffect={{
             rotate: 0,
             stretch: 0,
@@ -86,21 +90,21 @@ function OutdoorImagesCarousel({ visible, items, defaultHeading }) {
             )
           })}
         </motion.section>
-        <AnimatePresence>
-          {isVisible ? (
-            <DefaultHeading text={defaultHeading} />
-          ) : (
-            <Heading content={selected} />
-          )}
-        </AnimatePresence>
       </div>
+      <AnimatePresence>
+        {isVisible ? (
+          <DefaultHeading text={defaultHeading} />
+        ) : (
+          <Heading content={selected} />
+        )}
+      </AnimatePresence>
     </AnimateSharedLayout>
   )
 }
 function DefaultHeading({ text }) {
   return (
     <motion.h1
-      className="outdoor-heading"
+      className="wedding-heading text-center mt-8 mb-7 sm:mb-0 sm:mt-16"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { duration: 0.4 } }}
       exit={{ opacity: 0 }}
@@ -112,7 +116,7 @@ function DefaultHeading({ text }) {
 function Heading({ content }) {
   return (
     <motion.h1
-      className="outdoor-heading"
+      className="wedding-heading text-center mt-8 mb-7 sm:mb-0 sm:mt-16"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { duration: 0.4 } }}
       exit={{ opacity: 0 }}
