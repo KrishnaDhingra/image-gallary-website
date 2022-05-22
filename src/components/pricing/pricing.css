@@ -1,6 +1,4 @@
 :root {
-  --circles-size: 9.3rem;
-  --main-bg-color: #a67665;
   --border-width: 10px;
 }
 
@@ -45,7 +43,7 @@
   width: 100%;
   background-color: var(--main-bg-color);
   padding-block: 1.4rem;
-  color: white;
+  color: black;
   font-weight: 600;
   font-size: 20px;
   text-align: center;
@@ -54,13 +52,13 @@
 }
 .customized-package .top-banner {
   background-color: white;
-  color: var(--main-bg-color);
+  color: black;
 }
 .pricing-content-container button {
   padding: 0.8rem 3rem;
   border-radius: 15px;
   background-color: var(--main-bg-color);
-  color: white;
+  color: black;
   margin: 2rem auto;
   font-weight: 500;
 }
@@ -76,14 +74,14 @@
   font-size: 2.3rem;
   top: -64%;
   left: -10%;
-  color: var(--main-bg-color);
+  color: black;
 }
 .customized-package .pricing-content-container ul li::before {
-  color: white;
+  color: black;
 }
 .customized-package button {
   background-color: white;
-  color: var(--main-bg-color);
+  color: black;
 }
 
 /* hover effect for basic package */
@@ -99,21 +97,9 @@
 }
 .basic-package:hover .top-banner {
   background-color: white;
-  color: var(--main-bg-color);
-}
-.basic-package:hover .basic-package-price {
-  color: white;
-}
-.basic-package:hover .basic-package-points-container {
-  color: white;
+  color: black;
 }
 .basic-package:hover .basic-package-button {
   background-color: white;
-  color: var(--main-bg-color);
-}
-.basic-package:hover .basic-package-points-heading {
-  color: white;
-}
-.basic-package:hover .pricing-content-container ul li::before {
-  color: white;
+  color: black;
 }

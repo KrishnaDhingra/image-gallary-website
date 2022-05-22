@@ -1,6 +1,3 @@
-:root {
-  --main-bg-color: #a67665;
-}
 .main-samples-container {
   display: flex;
   flex-direction: column;
@@ -29,7 +26,6 @@
 .samples-inner .content,
 .samples-inner h3 {
   font-size: 1rem;
-  color: white;
 }
 .samples-inner .sample-image-container {
   height: 100%;

@@ -1,12 +1,9 @@
-:root {
-  --footer-bg-color: #a67665;
-}
 .home-footer {
   display: flex;
   flex-direction: column;
   width: 100vw;
   gap: 3rem;
-  background-color: var(--footer-bg-color);
+  background-color: var(--main-bg-color);
   padding-top: 7rem;
   padding-bottom: 3.5rem;
   margin-top: 8rem;
@@ -16,7 +13,6 @@
   grid-template-columns: 2fr 1fr 1fr;
 }
 .home-footer div {
-  color: white;
 }
 .footer-top h3 {
   font-weight: 600;
@@ -48,7 +44,7 @@
   gap: 1.5rem;
 }
 .home-footer .line {
-  border-top: 1px solid white;
+  border-top: 1px solid black;
   width: 100%;
 }
 .home-footer .bottom {

@@ -14,16 +14,17 @@ function ContactForm() {
         </div>
 
         <form action="" className="contact-form">
-          <input type="text" placeholder="Your Name" />
-          <input type="text" placeholder="Phone" />
-          <input type="email" placeholder="Email" />
-          <input type="text" placeholder="City" />
-          <input type="text" placeholder="Bride Name" />
-          <input type="text" placeholder="Groom Name" />
+          <input required={true} type="text" placeholder="Your Name" />
+          <input required={true} type="text" placeholder="Phone" />
+          <input required={true} type="email" placeholder="Email" />
+          <input required={true} type="text" placeholder="City" />
+          <input required={true} type="text" placeholder="Bride Name" />
+          <input required={true} type="text" placeholder="Groom Name" />
           <div className="radio-group px-[1.1rem] flex flex-col gap-2">
             <p className="text-sm mb-1">Let us know what kind of event it is</p>
             <div>
               <input
+                required={true}
                 type="radio"
                 className="radio-button"
                 id="wedding"
@@ -34,6 +35,7 @@ function ContactForm() {
             </div>
             <div>
               <input
+                required={true}
                 type="radio"
                 id="reception"
                 name="event-type"
@@ -43,6 +45,7 @@ function ContactForm() {
             </div>
             <div>
               <input
+                required={true}
                 type="radio"
                 id="engagement"
                 name="event-type"
@@ -51,20 +54,32 @@ function ContactForm() {
               <label htmlFor="engagement">Engagement</label>
             </div>
             <div>
-              <input type="radio" id="other" name="event-type" value="other" />
+              <input
+                required={true}
+                type="radio"
+                id="other"
+                name="event-type"
+                value="other"
+              />
               <label htmlFor="other">Other</label>
             </div>
           </div>
-          <input type="text" placeholder="Location" className="location" />
-          <input type="date" placeholder="Date and Time" />
-          <input type="text" placeholder="Venue" />
           <input
+            required={true}
+            type="text"
+            placeholder="Location"
+            className="location"
+          />
+          <input required={true} type="date" placeholder="Date and Time" />
+          <input required={true} type="text" placeholder="Venue" />
+          <input
+            required={true}
             className="description"
             type="text"
             placeholder="Description"
           />
 
-          <div className="not-a-robot py-[0.8rem] rounded-[0.5rem] flex items-center gap-3 border-2 border-white px-[1.1rem]">
+          <div className="not-a-robot py-[0.8rem] rounded-[0.5rem] flex items-center gap-3 border-2 border-black px-[1.1rem]">
             <input type="checkbox" name="not-a-robot" id="not-a-robot" />
             <label className="text-sm" htmlFor="not-a-robot">
               I'm not a robot

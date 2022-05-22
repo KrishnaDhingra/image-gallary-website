@@ -50,11 +50,12 @@ function Careers() {
           </div>
 
           <form action="" className="grow-with-us-form">
-            <input type="text" placeholder="First Name" />
-            <input type="text" placeholder="Last Name" />
-            <input type="email" placeholder="Email" />
-            <input type="text" placeholder="Phone" />
+            <input required={true} type="text" placeholder="First Name" />
+            <input required={true} type="text" placeholder="Last Name" />
+            <input required={true} type="email" placeholder="Email" />
+            <input required={true} type="text" placeholder="Phone" />
             <input
+              required={true}
               className="describe-yourself"
               type="text"
               placeholder="Describe yourself"

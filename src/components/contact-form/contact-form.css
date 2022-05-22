@@ -1,5 +1,5 @@
 .contact-container {
-  color: white;
+  color: black;
   padding: 5rem 0rem;
   background-color: var(--main-bg-color);
   margin-top: 8rem;
@@ -18,9 +18,9 @@
   column-gap: 4rem;
 }
 .contact-form input {
-  color: white;
+  color: black;
   background-color: transparent;
-  border-bottom: 1.5px solid white;
+  border-bottom: 1.5px solid black;
   padding: 0.6rem 1.1rem;
   font-size: 0.8rem;
 }
@@ -29,17 +29,20 @@
 }
 .contact-form input:focus {
   outline: none;
-  border-bottom: 1.5px solid rgb(184, 184, 184);
+  border-bottom: 1.5px solid rgb(135, 135, 135);
+}
+.contact-form input:focus::placeholder {
+  color: rgb(135, 135, 135);
 }
 .contact-form input::placeholder {
-  color: white;
+  color: black;
   font-size: 0.8rem;
 }
 .contact-form .description {
   grid-column: 1 / -1;
 }
 .contact-form button {
-  background-color: white;
+  background-color: black;
   color: var(--main-bg-color);
   max-width: 143px;
   padding: 0.8rem 0rem;
@@ -52,7 +55,7 @@
 }
 .radio-button {
   border: 2px solid black;
-  background-color: white;
+  background-color: black;
 }
 @media only screen and (max-width: 900px) {
   .contact {

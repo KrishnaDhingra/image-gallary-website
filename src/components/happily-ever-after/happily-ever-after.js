@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 import './happily-ever-after.css'
-import HappilyEverAfterImage from '../../utilities/pricing-big-image2.png'
-import HappilyEverAfterImage2 from '../../utilities/trending-image.png'
 import { IoIosArrowBack } from 'react-icons/io'
 import { IoIosArrowForward } from 'react-icons/io'
 import { motion } from 'framer-motion'
@@ -37,7 +35,7 @@ function HappilyEverAfter({ items, index }) {
         <IoIosArrowForward onClick={next} className="text-[2rem]" />
       </section>
 
-      <h1 className="text-[48px] font-semibold text-center mb-3">
+      <h1 className="text-[36px] sm:text-[48px] font-semibold text-center mb-3">
         Happily Ever After
       </h1>
     </div>

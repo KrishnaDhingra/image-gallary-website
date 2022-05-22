@@ -70,8 +70,8 @@ function Pricing() {
         <article className="customized-package">
           <p className="top-banner">Customized Package</p>
           <div className="pricing-content-container">
-            <h1 className="font-semibold text-[36px] text-white">Let's Talk</h1>
-            <p className="text-white my-3">
+            <h1 className="font-semibold text-[36px] ">Let's Talk</h1>
+            <p className=" my-3">
               Everything in basic, Plus Best for covering all Events
             </p>
             <CustomizedPackagePoints />
@@ -118,11 +118,7 @@ function CustomizedPackagePoints() {
   return (
     <ul className="mt-4">
       {points.map((item) => {
-        return (
-          <li key={item} className="text-white">
-            {item}
-          </li>
-        )
+        return <li key={item}>{item}</li>
       })}
     </ul>
   )

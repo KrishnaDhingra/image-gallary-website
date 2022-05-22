@@ -1,10 +1,5 @@
-:root {
-  --main-bg-color: #b5406c;
-}
-
 .homebigbutton {
   background-color: var(--main-bg-color);
-  color: white;
   font-size: 20px;
   font-weight: 500;
   border-radius: 12px;

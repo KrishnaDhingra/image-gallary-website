@@ -6,7 +6,7 @@ import { FiTwitter } from 'react-icons/fi'
 import { BsMailbox2 } from 'react-icons/bs'
 import { IoMailOpen } from 'react-icons/io5'
 import { BsFillTelephoneFill } from 'react-icons/bs'
-import NavbarLogo from '../../utilities/navbar-logo-white.png'
+import FooterLogo from '../../utilities/enter-image.png'
 
 function Footer() {
   return (
@@ -14,7 +14,7 @@ function Footer() {
       <div className="footer-top gap-[4rem] xl:gap-[8rem]">
         <div>
           <img
-            src={NavbarLogo}
+            src={FooterLogo}
             className="inline-block w-[17rem] mt-[-5rem] mb-[-4.9rem] ml-[-2.4rem]"
             alt=""
             srcset=""

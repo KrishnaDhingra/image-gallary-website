@@ -36,7 +36,8 @@
 .book-now-contact-form .radio-group {
   grid-column: 1 / -1;
 }
-.book-now-contact-form button {
+.book-now-contact-form button,
+.add-event-button {
   background-color: white;
   color: var(--main-bg-color);
   padding: 0.8rem 0rem;
@@ -73,12 +74,14 @@
 .kind-of-event-form form input::placeholder {
   color: var(--main-bg-color);
 }
-.kind-of-event-form form .add-event-button {
+.kind-of-event-form .add-event-button {
   max-width: max-content;
   font-weight: 500;
   padding: 0.7rem 2rem;
   font-size: 0.8rem;
   grid-column: 1 / -1;
+  margin-top: 1.7rem;
+  background-color: white;
   margin-left: auto;
 }
 @media only screen and (max-width: 900px) {

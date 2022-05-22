@@ -29,7 +29,7 @@ function Testimonials() {
     <main className="testimonials-container mx-auto">
       <article className="px-4 md:px-0 col-start-1 col-end-2">
         <h1 className="text-[48px] lg:text-[60px] font-semibold">
-          Who they say?
+          What they say?
         </h1>
         <p className="mt-3">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime

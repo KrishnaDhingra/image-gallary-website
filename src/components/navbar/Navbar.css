@@ -85,7 +85,7 @@ nav section {
   nav ul section {
     display: flex;
     flex-direction: column;
-    margin-top: 8rem;
+    margin-top: 4rem;
     gap: 2rem;
   }
 }

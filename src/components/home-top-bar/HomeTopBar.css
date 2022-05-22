@@ -1,5 +1,4 @@
 :root {
-  --main-text-color: #a67665;
   --heading-color: #3f000f;
 }
 
@@ -22,8 +21,7 @@
 }
 .start {
   margin-top: 2rem;
-  background-color: var(--main-text-color);
-  color: white;
+  background-color: var(--main-bg-color);
   border-radius: 12px;
   align-self: flex-start;
   padding: 0.5rem 4rem;
@@ -45,7 +43,7 @@
   height: 9.3rem;
   aspect-ratio: 1/1;
   border-radius: 50%;
-  background-color: var(--main-text-color);
+  background-color: var(--main-bg-color);
 }
 @media only screen and (max-width: 1000px) {
   .home-top-bar-main-container {

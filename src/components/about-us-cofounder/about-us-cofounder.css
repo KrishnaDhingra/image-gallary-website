@@ -1,11 +1,8 @@
-:root {
-  --main-bg-color: #a67665;
-}
 .aboutus-cofounder-container {
   margin-top: 7rem;
   background-color: var(--main-bg-color);
   padding: 5rem 0rem;
-  color: white;
+  color: black;
 }
 .aboutus-cofounder-container .inner-container {
   margin-inline: auto;

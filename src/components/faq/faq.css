@@ -1,8 +1,3 @@
-:root {
-  --circles-size: 9.3rem;
-  --main-bg-color: #a67665;
-}
-
 .faq-container {
   display: flex;
   flex-direction: column;
