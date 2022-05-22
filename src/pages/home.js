@@ -7,7 +7,7 @@ import HomePhotoSamplesContainer from '../components/home-photo-samples/home-pho
 import Testimonials from '../components/testimonials/testimonials'
 function Home() {
   return (
-    <div className="relative flex flex-col mt-[3rem] sm:mt-[9rem]">
+    <div className="relative flex flex-col mt-[3rem] sm:mt-[6rem]">
       <HomeTopBar />
       <HomeBigButton />
       <Counter />

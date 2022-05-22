@@ -6,12 +6,19 @@ import { FiTwitter } from 'react-icons/fi'
 import { BsMailbox2 } from 'react-icons/bs'
 import { IoMailOpen } from 'react-icons/io5'
 import { BsFillTelephoneFill } from 'react-icons/bs'
+import NavbarLogo from '../../utilities/navbar-logo-white.png'
 
 function Footer() {
   return (
     <footer className="home-footer px-[3rem] xl:px-[6.375rem]">
       <div className="footer-top gap-[4rem] xl:gap-[8rem]">
         <div>
+          <img
+            src={NavbarLogo}
+            className="inline-block w-[17rem] mt-[-5rem] mb-[-4.9rem] ml-[-2.4rem]"
+            alt=""
+            srcset=""
+          />
           <p>
             Every wedding has its own unique sense of style and personality, our
             cinematic approach is to be non-directorial and more observative

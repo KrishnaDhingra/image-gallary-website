@@ -6,7 +6,7 @@ function WeddingFooter({ setMoreVisible }) {
   const relative_path = window.location.pathname
 
   return (
-    <footer className="wedding-footer hidden sm:flex pb-8">
+    <footer className="relative wedding-footer justify-center justify-evenly mt-4 sm:mt-0 sm:gap-[0] sm:justify-between flex pb-8">
       {relative_path === '/wedding' ? (
         <Link to="/services">Services</Link>
       ) : (
@@ -17,7 +17,12 @@ function WeddingFooter({ setMoreVisible }) {
       ) : (
         <Link to="/services">Services</Link>
       )}
-      <p onClick={() => setMoreVisible(true)}>Discover More +</p>
+      <p
+        className="discover-more-text font-semibold absolute sm:font-normal sm:relative"
+        onClick={() => setMoreVisible(true)}
+      >
+        Discover More +
+      </p>
       {relative_path === '/wedding' ||
       relative_path === '/services' ||
       relative_path === '/gallery' ? (

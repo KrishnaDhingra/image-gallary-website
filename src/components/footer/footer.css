@@ -25,10 +25,6 @@
   padding: 0rem 0rem;
   margin: 0rem 0rem;
 }
-.footer-logo {
-  border: 2px solid red;
-  width: 10rem;
-}
 .footer-top > * {
   display: flex;
   flex-direction: column;

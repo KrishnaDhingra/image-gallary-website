@@ -3,6 +3,31 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @font-face {
+  font-family: 'lemonmilk';
+  src: url('./fonts/lemonmilk/LEMONMILK-Bold.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'lemonmilk';
+  src: url('./fonts/lemonmilk/LEMONMILK-Light.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'lemonmilk';
+  src: url('./fonts/lemonmilk/LEMONMILK-Medium.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'lemonmilk';
+  src: url('./fonts/lemonmilk/LEMONMILK-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+} */
+
 html {
   scroll-behavior: smooth;
 }
@@ -19,6 +44,7 @@ html {
 
 body {
   margin: 0;
+  /* font-family: 'lemonmilk'; */
   font-family: 'Poppins', sans-serif;
   background-color: #fbf7f8;
   overflow-x: hidden;
