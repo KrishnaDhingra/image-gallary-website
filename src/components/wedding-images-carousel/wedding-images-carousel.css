@@ -2,7 +2,7 @@
   width: max-content;
   max-width: min(1300px, 90%);
   margin-top: 4rem;
-  height: 50vh;
+  height: min(45vh, 370px);
   display: flex;
   margin-inline: auto;
   gap: 1.3rem;
@@ -14,7 +14,8 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
-.wedding-image::after {
+.wedding-image::after,
+.videos-image::after {
   content: '';
   position: absolute;
   top: 0;
@@ -26,14 +27,17 @@
   -ms-transition: background-color 0.4s;
   transition: background-color 0.4s;
 }
-.wedding-image:hover::after {
+.wedding-image:hover::after,
+.videos-image:hover::after {
   background-color: transparent;
 }
 
-.wedding-image:nth-child(even) {
+.wedding-image:nth-child(even),
+.videos-image:nth-child(even) {
   transform: translateY(-20px);
 }
-.wedding-image:nth-child(odd) {
+.wedding-image:nth-child(odd),
+.videos-image:nth-child(odd) {
   transform: translateY(20px);
 }
 .wedding-heading {

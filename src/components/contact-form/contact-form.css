@@ -42,8 +42,8 @@
   grid-column: 1 / -1;
 }
 .contact-form button {
-  background-color: black;
-  color: var(--main-bg-color);
+  background-color: white;
+  color: black;
   max-width: 143px;
   padding: 0.8rem 0rem;
   border-radius: 0.5rem;

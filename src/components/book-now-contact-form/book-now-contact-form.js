@@ -83,7 +83,7 @@ function BookNowContactForm() {
               Add Event
             </div>
           </div>
-          <div className="not-a-robot py-[0.8rem] rounded-[0.5rem] flex items-center gap-3 border-2 border-white px-[1.1rem]">
+          <div className="py-[0.8rem] rounded-[0.5rem] flex items-center gap-3 border-2 border-black px-[1.1rem]">
             <input
               required={true}
               type="checkbox"

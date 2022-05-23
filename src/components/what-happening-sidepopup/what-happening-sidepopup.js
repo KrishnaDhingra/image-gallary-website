@@ -39,10 +39,7 @@ function WhatHappeningSidePopup({ onSelect }) {
         <SideBar onSelect={onSelect} />
 
         <section className="popup-main-content">
-          <h2
-            onClick={onSelect}
-            className="text-white font-semibold what-happening-text"
-          >
+          <h2 onClick={onSelect} className="font-semibold what-happening-text">
             What's Happening
           </h2>
 
@@ -82,19 +79,19 @@ const SideBar = ({ onSelect }) => {
       variants={item}
       className="popup-sidebar flex flex-col justify-between h-screen"
     >
-      <CgClose onClick={onSelect} className="text-white text-md" />
-      <div className="flex flex-col gap-7 sidebar-bottom items-center cursor-pointer">
-        {/* <span className="sidebar-text text-white text-sm">
+      <CgClose onClick={onSelect} className=" text-md" />
+      <div className="cursor-pointer flex flex-col gap-7 sidebar-bottom items-center">
+        {/* <span className="sidebar-text  text-sm">
         Follow OOAK Photography
       </span> */}
         <a href="">
-          <BsInstagram className="sidebar-icon text-white text-xs sm:text-sm" />
+          <BsInstagram className="cursor-pointer sidebar-icon  text-xs sm:text-sm" />
         </a>
         <a href="">
-          <FiFacebook className="sidebar-icon text-white text-sm sm:text-md" />
+          <FiFacebook className="cursor-pointer sidebar-icon  text-sm sm:text-md" />
         </a>
         <a href="">
-          <FiTwitter className="sidebar-icon text-white text-xs sm:text-sm" />
+          <FiTwitter className="cursor-pointer sidebar-icon  text-xs sm:text-sm" />
         </a>
       </div>
     </motion.section>

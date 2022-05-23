@@ -2,7 +2,6 @@
   margin-top: 7rem;
   background-color: var(--main-bg-color);
   padding: 5rem 0rem;
-  color: white;
 }
 .book-now-founders-note-container .inner-container {
   margin-inline: auto;
@@ -16,7 +15,7 @@
   content: '';
   position: absolute;
   width: 40%;
-  border: 1px solid white;
+  border: 1px solid black;
   left: 50%;
   transform: translateX(-50%);
   bottom: -10px;

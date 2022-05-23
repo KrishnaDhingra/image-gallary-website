@@ -6,7 +6,7 @@ function NavbarLink({ onClick, text, redirect }) {
   return (
     <motion.li onClick={onClick} variants={itemVariants()}>
       <Link to={redirect}>
-        <span>{text}</span>
+        <span className="font-semibold">{text}</span>
       </Link>
     </motion.li>
   )

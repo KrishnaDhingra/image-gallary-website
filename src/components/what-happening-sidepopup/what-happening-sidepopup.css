@@ -4,8 +4,8 @@
   left: 0;
   height: 100vh;
   width: min(100%, 500px);
-  background-color: black;
-  color: white;
+  background-color: var(--main-bg-color);
+  color: black;
   overflow-y: auto;
   z-index: 1000;
 }

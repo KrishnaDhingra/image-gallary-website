@@ -78,7 +78,7 @@ function VideosImagesCarousel({
           variants={parentVariants}
           initial="hidden"
           animate="visible"
-          className="VideosImagesCarousel"
+          className="WeddingImagesCarousel"
         >
           {items.map((item, index) => {
             return (

@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import './outdoor-images-carousel.css'
 import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -66,7 +65,7 @@ function OutdoorImagesCarousel({ visible, items, defaultHeading }) {
           variants={parentVariants}
           initial="hidden"
           animate="visible"
-          className="OutdoorImagesCarousel"
+          className="WeddingImagesCarousel"
         >
           {items.map((item, index) => {
             return (
@@ -82,7 +81,7 @@ function OutdoorImagesCarousel({ visible, items, defaultHeading }) {
                   width: '220px',
                   transition: { duration: 0.4 },
                 }}
-                className="outdoors-image"
+                className="videos-image"
                 style={{
                   backgroundImage: `url(${item.image})`,
                 }}

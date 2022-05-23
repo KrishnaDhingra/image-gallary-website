@@ -6,7 +6,6 @@ import { FaRegBell } from 'react-icons/fa'
 import { BiHomeAlt } from 'react-icons/bi'
 import { ulVariants } from './ulVariants'
 import NavbarLogo from '../../utilities/enter-image.png'
-import NavbarLogoWhite from '../../utilities/navbar-logo-white.png'
 import Backdrop from '../backdrop'
 import NavbarLink from './NavbarLink'
 import SubMenuLink from './SubMenuLink'
@@ -117,7 +116,7 @@ function Navbar() {
             {navbarVisible && (
               <Link to="/">
                 <BiHomeAlt
-                  className={`home-icon shrink-0 text-white text-2xl absolute top-0 left-[170%] sm:left-[200%]`}
+                  className={`home-icon shrink-0 text-2xl absolute top-0 left-[170%] sm:left-[200%]`}
                   onClick={() => {
                     setNavbarVisible(false)
                   }}
@@ -127,11 +126,7 @@ function Navbar() {
           </div>
           <Link to="/">
             <div className="logo" onClick={() => setNavbarVisible(false)}>
-              <img
-                className="max-w-[9rem]"
-                src={navbarVisible ? NavbarLogoWhite : NavbarLogo}
-                alt=""
-              />
+              <img className="max-w-[9rem]" src={NavbarLogo} alt="" />
             </div>
           </Link>
           <div

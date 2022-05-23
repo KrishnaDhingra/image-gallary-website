@@ -25,11 +25,11 @@ function SubMenuLink({ onClick, redirect, text }) {
     <div className="flex flex-col relative">
       <motion.li
         onClick={() => setSubMenuVisible(!subMenuVisible)}
-        className="flex gap-4"
+        className="font-semibold flex gap-4"
         variants={itemVariants()}
       >
-        <span className="text-white">{text}</span>
-        <IoIosArrowBack className="hover:text-gray-400 text-white -rotate-90" />
+        <span className="font-semibold">{text}</span>
+        <IoIosArrowBack className="hover:text-gray-600 -rotate-90" />
       </motion.li>
       <AnimatePresence>
         {subMenuVisible && (
@@ -38,7 +38,7 @@ function SubMenuLink({ onClick, redirect, text }) {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="relative sm:absolute top-[130%] sm:left-[-20%] text-white flex flex-col my-3 sm:my-0 sm:flex-row gap-3"
+            className="relative sm:absolute top-[130%] sm:left-[-20%] flex flex-col my-3 sm:my-0 sm:flex-row gap-3"
           >
             {['Chennai', 'Coimbatore', 'Bangalore'].map((item) => {
               return (
