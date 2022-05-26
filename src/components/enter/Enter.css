@@ -9,33 +9,31 @@
   background-color: white;
   z-index: 999990;
 }
+.enter-content .left,
 .enter-content .right {
   top: 0;
-  left: 0;
   width: var(--bar-width);
+  background-image: linear-gradient(#afd8e6, #dbf3fa);
   height: 100vh;
-  background-image: linear-gradient(#a77765, #de9a5d);
   z-index: 999999;
 }
 .enter-content .left {
-  top: 0;
-  width: var(--bar-width);
-  height: 100vh;
+  left: 0;
+}
+.enter-content .right {
   right: 0;
-  background-image: linear-gradient(#a77765, #de9a5d);
-  z-index: 999999;
 }
 .enter-content .top {
   top: 0;
   height: var(--bar-width);
   width: 100vw;
   right: 0;
-  background-image: linear-gradient(#a77765, #aa7864);
+  background-image: linear-gradient(#afd8e6, #c7e2ec);
 }
 .enter-content .bottom {
   bottom: 0;
   height: var(--bar-width);
   width: 100vw;
   right: 0;
-  background-image: linear-gradient(#d4935e, #de9a5d);
+  background-image: linear-gradient(#d6f0f8, #dbf3fa);
 }

@@ -34,11 +34,11 @@
 
 .wedding-image:nth-child(even),
 .videos-image:nth-child(even) {
-  transform: translateY(-20px);
+  transform: translateY(-20px) !important;
 }
 .wedding-image:nth-child(odd),
 .videos-image:nth-child(odd) {
-  transform: translateY(20px);
+  transform: translateY(20px) !important;
 }
 .wedding-heading {
   font-size: 2.3rem;

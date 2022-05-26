@@ -42,7 +42,8 @@ function VideosImagesCarousel({
           spaceBetween={25}
           onSlideChange={({ activeIndex }) => {
             setIsVisible(false)
-            setSelected(items[activeIndex].text)
+            // change this to items[activeIndex].text
+            setSelected('Videos1')
           }}
           coverflowEffect={{
             rotate: 0,
@@ -63,7 +64,7 @@ function VideosImagesCarousel({
                   setHappilyVisible(true)
                 }}
               >
-                <img src={item.image} />
+                <img src={item} />
               </SwiperSlide>
             )
           })}
@@ -87,7 +88,8 @@ function VideosImagesCarousel({
                 key={index}
                 onMouseEnter={() => {
                   setIsVisible(false)
-                  setSelected(item.text)
+                  // change this
+                  setSelected('Videos1')
                 }}
                 onClick={() => {
                   setHappilyIndexCounter(index)
@@ -100,7 +102,7 @@ function VideosImagesCarousel({
                 }}
                 className="videos-image"
                 style={{
-                  backgroundImage: `url(${item.image})`,
+                  backgroundImage: `url(${item})`,
                 }}
               ></motion.div>
             )

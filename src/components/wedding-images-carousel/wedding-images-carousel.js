@@ -37,7 +37,8 @@ function WeddingImagesCarousel({ visible, items, defaultHeading }) {
           spaceBetween={25}
           onSlideChange={({ activeIndex }) => {
             setIsVisible(false)
-            setSelected(items[activeIndex].text)
+            // change this to this items[activeIndex].text
+            setSelected('Wedding1')
           }}
           coverflowEffect={{
             rotate: 0,
@@ -52,7 +53,7 @@ function WeddingImagesCarousel({ visible, items, defaultHeading }) {
           {items.map((item, index) => {
             return (
               <SwiperSlide key={index}>
-                <img src={item.image} />
+                <img src={item} />
               </SwiperSlide>
             )
           })}
@@ -76,7 +77,8 @@ function WeddingImagesCarousel({ visible, items, defaultHeading }) {
                 key={index}
                 onMouseEnter={() => {
                   setIsVisible(false)
-                  setSelected(item.text)
+                  // change this
+                  setSelected('Wedding1')
                 }}
                 onMouseLeave={() => setIsVisible(true)}
                 whileHover={{
@@ -85,7 +87,7 @@ function WeddingImagesCarousel({ visible, items, defaultHeading }) {
                 }}
                 className="wedding-image"
                 style={{
-                  backgroundImage: `url(${item.image})`,
+                  backgroundImage: `url(${item})`,
                 }}
               ></motion.div>
             )

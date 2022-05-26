@@ -35,7 +35,8 @@ function OutdoorImagesCarousel({ visible, items, defaultHeading }) {
           spaceBetween={25}
           onSlideChange={({ activeIndex }) => {
             setIsVisible(false)
-            setSelected(items[activeIndex].text)
+            // change this to items[activeIndex].text
+            setSelected('Outdoor1')
           }}
           coverflowEffect={{
             rotate: 0,
@@ -50,7 +51,7 @@ function OutdoorImagesCarousel({ visible, items, defaultHeading }) {
           {items.map((item, index) => {
             return (
               <SwiperSlide key={index}>
-                <img src={item.image} />
+                <img src={item} />
               </SwiperSlide>
             )
           })}
@@ -74,7 +75,8 @@ function OutdoorImagesCarousel({ visible, items, defaultHeading }) {
                 key={index}
                 onMouseEnter={() => {
                   setIsVisible(false)
-                  setSelected(item.text)
+                  // change this
+                  setSelected('Outdoor1')
                 }}
                 onMouseLeave={() => setIsVisible(true)}
                 whileHover={{
@@ -83,7 +85,7 @@ function OutdoorImagesCarousel({ visible, items, defaultHeading }) {
                 }}
                 className="videos-image"
                 style={{
-                  backgroundImage: `url(${item.image})`,
+                  backgroundImage: `url(${item})`,
                 }}
               ></motion.div>
             )

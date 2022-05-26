@@ -1,34 +1,32 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import OutdoorImagesCarousel from '../components/outdoor-images-carousel/outdoor-images-carousel'
 import OutdoorMore from '../components/outdoor-more/outdoor-more'
 import WeddingFooter from '../components/wedding-footer/wedding-footer'
+import { ref, getDownloadURL, listAll } from 'firebase/storage'
+import { storage } from '../firebase'
 
 function Outdoor() {
   const [outdoorMoreVisible, setOutdoorMoreVisible] = useState(false)
 
-  const items = [
-    {
-      image: 'https://swiperjs.com/demos/images/nature-1.jpg',
-      text: 'Outdoor1',
-    },
-    {
-      image: 'https://swiperjs.com/demos/images/nature-2.jpg',
-      text: 'Outdoor2',
-    },
-    {
-      image: 'https://swiperjs.com/demos/images/nature-3.jpg',
-      text: 'Outdoor3',
-    },
-    {
-      image: 'https://swiperjs.com/demos/images/nature-4.jpg',
-      text: 'Outdoor4',
-    },
-  ]
+  const [imageUrls, setImageUrls] = useState([])
+
+  const imagesListRef = ref(storage, 'outdoor/')
+
+  useEffect(() => {
+    console.log(imageUrls)
+    listAll(imagesListRef).then((response) => {
+      response.items.forEach((item) => {
+        getDownloadURL(item).then((url) => {
+          setImageUrls((prev) => [...prev, url])
+        })
+      })
+    })
+  }, [])
   return (
     <div className="flex flex-col gap-4">
       <OutdoorImagesCarousel
         visible={outdoorMoreVisible}
-        items={items}
+        items={imageUrls}
         defaultHeading={'Outdoor'}
       />
       <WeddingFooter setMoreVisible={setOutdoorMoreVisible} />
