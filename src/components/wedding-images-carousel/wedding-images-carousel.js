@@ -10,7 +10,8 @@ import 'swiper/css/pagination'
 
 import { EffectCoverflow, Pagination } from 'swiper'
 
-function WeddingImagesCarousel({ visible, items, defaultHeading }) {
+function WeddingImagesCarousel({ visible, hoverText, images, defaultHeading }) {
+  console.log(images, hoverText)
   const parentVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -38,7 +39,7 @@ function WeddingImagesCarousel({ visible, items, defaultHeading }) {
           onSlideChange={({ activeIndex }) => {
             setIsVisible(false)
             // change this to this items[activeIndex].text
-            setSelected('Wedding1')
+            setSelected(hoverText[activeIndex])
           }}
           coverflowEffect={{
             rotate: 0,
@@ -50,10 +51,10 @@ function WeddingImagesCarousel({ visible, items, defaultHeading }) {
           modules={[EffectCoverflow, Pagination]}
           className="mySwiper"
         >
-          {items.map((item, index) => {
+          {images.map((image, index) => {
             return (
               <SwiperSlide key={index}>
-                <img src={item} />
+                <img src={image} />
               </SwiperSlide>
             )
           })}
@@ -70,7 +71,7 @@ function WeddingImagesCarousel({ visible, items, defaultHeading }) {
           animate="visible"
           className="WeddingImagesCarousel"
         >
-          {items.map((item, index) => {
+          {images.map((image, index) => {
             return (
               <motion.div
                 layout
@@ -78,7 +79,7 @@ function WeddingImagesCarousel({ visible, items, defaultHeading }) {
                 onMouseEnter={() => {
                   setIsVisible(false)
                   // change this
-                  setSelected('Wedding1')
+                  setSelected(hoverText[index])
                 }}
                 onMouseLeave={() => setIsVisible(true)}
                 whileHover={{
@@ -87,7 +88,7 @@ function WeddingImagesCarousel({ visible, items, defaultHeading }) {
                 }}
                 className="wedding-image"
                 style={{
-                  backgroundImage: `url(${item})`,
+                  backgroundImage: `url(${image})`,
                 }}
               ></motion.div>
             )

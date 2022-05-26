@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react'
 import WeddingImagesCarousel from '../components/wedding-images-carousel/wedding-images-carousel'
 import WeddingMore from '../components/wedding-more/wedding-more'
 import WeddingFooter from '../components/wedding-footer/wedding-footer'
-import { ref, getDownloadURL, listAll } from 'firebase/storage'
-import { doc, getDoc } from 'firebase/firestore'
+import { ref } from 'firebase/storage'
+import { collection } from 'firebase/firestore'
 import { db, storage } from '../firebase'
+import { getCarouselHoverText } from '../functions/getCarouselHoverText'
+import { getCarouselImages } from '../functions/getCarouselImages'
 
 function Wedding() {
   const [weddingMoreVisible, setWeddingMoreVisible] = useState(false)
@@ -12,34 +14,19 @@ function Wedding() {
   const [imageUrls, setImageUrls] = useState([])
 
   const imagesListRef = ref(storage, 'wedding/')
-  const hoverTextDocRef = doc(db, 'wedding-hover-text', 'wedding-hover-text')
+  const hoverTextRef = collection(db, 'wedding-hover-text')
 
   useEffect(() => {
-    const getHoverText = async () => {
-      const docSnap = await getDoc(hoverTextDocRef)
-      docSnap.data().forEach((item) => {
-        console.log(item)
-      })
-    }
-
-    const getImages = () => {
-      listAll(imagesListRef).then((response) => {
-        response.items.forEach((item) => {
-          getDownloadURL(item).then((url) => {
-            setImageUrls((prev) => [...prev, url])
-          })
-        })
-      })
-    }
-    getHoverText()
-    getImages()
+    setHoverText(getCarouselHoverText(hoverTextRef))
+    setImageUrls(getCarouselImages(imagesListRef))
   }, [])
 
   return (
     <div className="flex flex-col gap-4">
       <WeddingImagesCarousel
         visible={weddingMoreVisible}
-        items={imageUrls}
+        images={imageUrls}
+        hoverText={hoverText}
         defaultHeading={'Wedding'}
       />
       <WeddingFooter setMoreVisible={setWeddingMoreVisible} />

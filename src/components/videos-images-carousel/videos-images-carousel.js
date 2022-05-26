@@ -14,7 +14,8 @@ function VideosImagesCarousel({
   setHappilyIndexCounter,
   setHappilyVisible,
   visible,
-  items,
+  hoverText,
+  images,
   defaultHeading,
 }) {
   const parentVariants = {
@@ -43,7 +44,7 @@ function VideosImagesCarousel({
           onSlideChange={({ activeIndex }) => {
             setIsVisible(false)
             // change this to items[activeIndex].text
-            setSelected('Videos1')
+            setSelected(hoverText[activeIndex])
           }}
           coverflowEffect={{
             rotate: 0,
@@ -55,7 +56,7 @@ function VideosImagesCarousel({
           modules={[EffectCoverflow, Pagination]}
           className="mySwiper"
         >
-          {items.map((item, index) => {
+          {images.map((image, index) => {
             return (
               <SwiperSlide
                 key={index}
@@ -64,7 +65,7 @@ function VideosImagesCarousel({
                   setHappilyVisible(true)
                 }}
               >
-                <img src={item} />
+                <img src={image} />
               </SwiperSlide>
             )
           })}
@@ -81,7 +82,7 @@ function VideosImagesCarousel({
           animate="visible"
           className="WeddingImagesCarousel"
         >
-          {items.map((item, index) => {
+          {images.map((image, index) => {
             return (
               <motion.div
                 layout
@@ -89,7 +90,7 @@ function VideosImagesCarousel({
                 onMouseEnter={() => {
                   setIsVisible(false)
                   // change this
-                  setSelected('Videos1')
+                  setSelected(hoverText[index])
                 }}
                 onClick={() => {
                   setHappilyIndexCounter(index)
@@ -102,7 +103,7 @@ function VideosImagesCarousel({
                 }}
                 className="videos-image"
                 style={{
-                  backgroundImage: `url(${item})`,
+                  backgroundImage: `url(${image})`,
                 }}
               ></motion.div>
             )
