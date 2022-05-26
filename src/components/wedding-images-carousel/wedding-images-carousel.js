@@ -11,7 +11,6 @@ import 'swiper/css/pagination'
 import { EffectCoverflow, Pagination } from 'swiper'
 
 function WeddingImagesCarousel({ visible, hoverText, images, defaultHeading }) {
-  console.log(images, hoverText)
   const parentVariants = {
     hidden: { opacity: 0 },
     visible: {

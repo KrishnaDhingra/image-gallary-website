@@ -16,8 +16,7 @@ function Footer() {
           <img
             src={FooterLogo}
             className="inline-block w-[17rem] mt-[-5rem] mb-[-4.9rem] ml-[-2.4rem]"
-            alt=""
-            srcset=""
+            alt="Footer Logo"
           />
           <p>
             Every wedding has its own unique sense of style and personality, our

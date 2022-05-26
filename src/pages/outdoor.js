@@ -2,11 +2,9 @@ import React, { useState, useEffect } from 'react'
 import OutdoorImagesCarousel from '../components/outdoor-images-carousel/outdoor-images-carousel'
 import OutdoorMore from '../components/outdoor-more/outdoor-more'
 import WeddingFooter from '../components/wedding-footer/wedding-footer'
-import { ref } from 'firebase/storage'
-import { collection } from 'firebase/firestore'
+import { ref, getDownloadURL, listAll } from 'firebase/storage'
+import { collection, getDocs } from 'firebase/firestore'
 import { db, storage } from '../firebase'
-import { getCarouselHoverText } from '../functions/getCarouselHoverText'
-import { getCarouselImages } from '../functions/getCarouselImages'
 
 function Outdoor() {
   const [outdoorMoreVisible, setOutdoorMoreVisible] = useState(false)
@@ -14,12 +12,31 @@ function Outdoor() {
   const [hoverText, setHoverText] = useState([])
   const [imageUrls, setImageUrls] = useState([])
 
-  const imagesListRef = ref(storage, 'wedding/')
+  const imagesListRef = ref(storage, 'outdoor/')
   const hoverTextRef = collection(db, 'wedding-hover-text')
 
   useEffect(() => {
-    setHoverText(getCarouselHoverText(hoverTextRef))
-    setImageUrls(getCarouselImages(imagesListRef))
+    const getHoverText = async () => {
+      let querySnapshot = await getDocs(hoverTextRef)
+
+      let hoverText = []
+      querySnapshot.forEach((doc) => {
+        hoverText.push(doc.data().text)
+      })
+      setHoverText(hoverText)
+    }
+    const getImages = () => {
+      setImageUrls([])
+      listAll(imagesListRef).then((response) => {
+        response.items.forEach((item) => {
+          getDownloadURL(item).then((url) => {
+            setImageUrls((prev) => [...prev, url])
+          })
+        })
+      })
+    }
+    getHoverText()
+    getImages()
   }, [])
   return (
     <div className="flex flex-col gap-4">

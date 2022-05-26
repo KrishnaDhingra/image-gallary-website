@@ -3,11 +3,10 @@ import VideosImagesCarousel from '../components/videos-images-carousel/videos-im
 import OutdoorMore from '../components/outdoor-more/outdoor-more'
 import WeddingFooter from '../components/wedding-footer/wedding-footer'
 import HappilyEverAfter from '../components/happily-ever-after/happily-ever-after'
-import { ref } from 'firebase/storage'
-import { collection } from 'firebase/firestore'
+import { ref, getDownloadURL, listAll } from 'firebase/storage'
+import { collection, getDocs } from 'firebase/firestore'
 import { db, storage } from '../firebase'
-import { getCarouselHoverText } from '../functions/getCarouselHoverText'
-import { getCarouselImages } from '../functions/getCarouselImages'
+
 function Videos() {
   const [happilyIndexCounter, setHappilyIndexCounter] = useState(0)
   const [happilyVisible, setHappilyVisible] = useState(false)
@@ -16,12 +15,31 @@ function Videos() {
   const [hoverText, setHoverText] = useState([])
   const [imageUrls, setImageUrls] = useState([])
 
-  const imagesListRef = ref(storage, 'wedding/')
+  const imagesListRef = ref(storage, 'videos/')
   const hoverTextRef = collection(db, 'wedding-hover-text')
 
   useEffect(() => {
-    setHoverText(getCarouselHoverText(hoverTextRef))
-    setImageUrls(getCarouselImages(imagesListRef))
+    const getHoverText = async () => {
+      let querySnapshot = await getDocs(hoverTextRef)
+
+      let hoverText = []
+      querySnapshot.forEach((doc) => {
+        hoverText.push(doc.data().text)
+      })
+      setHoverText(hoverText)
+    }
+    const getImages = () => {
+      setImageUrls([])
+      listAll(imagesListRef).then((response) => {
+        response.items.forEach((item) => {
+          getDownloadURL(item).then((url) => {
+            setImageUrls((prev) => [...prev, url])
+          })
+        })
+      })
+    }
+    getHoverText()
+    getImages()
   }, [])
   return (
     <div className="flex flex-col gap-4">
